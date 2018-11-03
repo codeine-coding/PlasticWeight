@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9FBF2B96218E09BB009212BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2B95218E09BB009212BE /* AppDelegate.swift */; };
 		9FBF2B98218E09BB009212BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2B97218E09BB009212BE /* ViewController.swift */; };
-		9FBF2B9B218E09BB009212BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF2B99218E09BB009212BE /* Main.storyboard */; };
 		9FBF2B9D218E09BD009212BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF2B9C218E09BD009212BE /* Assets.xcassets */; };
 		9FBF2BA0218E09BD009212BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF2B9E218E09BD009212BE /* LaunchScreen.storyboard */; };
 		9FBF2BAB218E09BD009212BE /* PlasticWeightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BAA218E09BD009212BE /* PlasticWeightTests.swift */; };
@@ -37,7 +36,6 @@
 		9FBF2B92218E09BB009212BE /* PlasticWeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlasticWeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBF2B95218E09BB009212BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FBF2B97218E09BB009212BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9FBF2B9A218E09BB009212BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FBF2B9C218E09BD009212BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FBF2B9F218E09BD009212BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FBF2BA1218E09BD009212BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +81,7 @@
 				9FBF2B93218E09BB009212BE /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		9FBF2B93218E09BB009212BE /* Products */ = {
 			isa = PBXGroup;
@@ -99,7 +98,6 @@
 			children = (
 				9FBF2B95218E09BB009212BE /* AppDelegate.swift */,
 				9FBF2B97218E09BB009212BE /* ViewController.swift */,
-				9FBF2B99218E09BB009212BE /* Main.storyboard */,
 				9FBF2B9C218E09BD009212BE /* Assets.xcassets */,
 				9FBF2B9E218E09BD009212BE /* LaunchScreen.storyboard */,
 				9FBF2BA1218E09BD009212BE /* Info.plist */,
@@ -231,7 +229,6 @@
 			files = (
 				9FBF2BA0218E09BD009212BE /* LaunchScreen.storyboard in Resources */,
 				9FBF2B9D218E09BD009212BE /* Assets.xcassets in Resources */,
-				9FBF2B9B218E09BB009212BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +290,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9FBF2B99218E09BB009212BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FBF2B9A218E09BB009212BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9FBF2B9E218E09BD009212BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -435,6 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
 				INFOPLIST_FILE = PlasticWeight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,7 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeinetech.PlasticWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
 				INFOPLIST_FILE = PlasticWeight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeinetech.PlasticWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
