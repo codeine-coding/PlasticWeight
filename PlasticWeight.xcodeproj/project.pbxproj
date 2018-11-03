@@ -13,6 +13,7 @@
 		9FBF2BA0218E09BD009212BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF2B9E218E09BD009212BE /* LaunchScreen.storyboard */; };
 		9FBF2BAB218E09BD009212BE /* PlasticWeightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BAA218E09BD009212BE /* PlasticWeightTests.swift */; };
 		9FBF2BB6218E09BE009212BE /* PlasticWeightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BB5218E09BE009212BE /* PlasticWeightUITests.swift */; };
+		9FBF2BC4218E0F9C009212BE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF2BC3218E0F9C009212BE /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		9FBF2BB1218E09BD009212BE /* PlasticWeightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlasticWeightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBF2BB5218E09BE009212BE /* PlasticWeightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasticWeightUITests.swift; sourceTree = "<group>"; };
 		9FBF2BB7218E09BE009212BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FBF2BC3218E0F9C009212BE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				9FBF2BA9218E09BD009212BE /* PlasticWeightTests */,
 				9FBF2BB4218E09BD009212BE /* PlasticWeightUITests */,
 				9FBF2B93218E09BB009212BE /* Products */,
+				9FBF2BC3218E0F9C009212BE /* .gitignore */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBF2BA0218E09BD009212BE /* LaunchScreen.storyboard in Resources */,
+				9FBF2BC4218E0F9C009212BE /* .gitignore in Resources */,
 				9FBF2B9D218E09BD009212BE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
