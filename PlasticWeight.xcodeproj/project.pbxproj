@@ -99,11 +99,11 @@
 		9FBF2B94218E09BB009212BE /* PlasticWeight */ = {
 			isa = PBXGroup;
 			children = (
-				9FBF2B95218E09BB009212BE /* AppDelegate.swift */,
+				9FBF2BC5218E495B009212BE /* Models */,
+				9FBF2BC8218E4981009212BE /* Views */,
+				9FBF2BC7218E4978009212BE /* Controllers */,
 				9FBF2B97218E09BB009212BE /* ViewController.swift */,
-				9FBF2B9C218E09BD009212BE /* Assets.xcassets */,
-				9FBF2B9E218E09BD009212BE /* LaunchScreen.storyboard */,
-				9FBF2BA1218E09BD009212BE /* Info.plist */,
+				9FBF2BC9218E49A4009212BE /* Resources */,
 			);
 			path = PlasticWeight;
 			sourceTree = "<group>";
@@ -124,6 +124,38 @@
 				9FBF2BB7218E09BE009212BE /* Info.plist */,
 			);
 			path = PlasticWeightUITests;
+			sourceTree = "<group>";
+		};
+		9FBF2BC5218E495B009212BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FBF2BC7218E4978009212BE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9FBF2BC8218E4981009212BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9FBF2BC9218E49A4009212BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FBF2B95218E09BB009212BE /* AppDelegate.swift */,
+				9FBF2B9C218E09BD009212BE /* Assets.xcassets */,
+				9FBF2B9E218E09BD009212BE /* LaunchScreen.storyboard */,
+				9FBF2BA1218E09BD009212BE /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
