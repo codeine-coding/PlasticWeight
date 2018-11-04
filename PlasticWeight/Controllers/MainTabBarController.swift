@@ -20,19 +20,19 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupView() {
-        sheetBarViewController = UINavigationController(rootViewController: UIViewController())
+        sheetBarViewController = UINavigationController(rootViewController: SheetBarViewController())
         sheetBarViewController.title = "Sheet / Bar"
         sheetBarViewController.tabBarItem.image = UIImage(named: "TabBar/sheet")
         
-        rodViewController = UINavigationController(rootViewController: UIViewController())
+        rodViewController = UINavigationController(rootViewController: RodViewController())
         rodViewController.title = "Rod"
         rodViewController.tabBarItem.image = UIImage(named: "TabBar/rod")
         
-        roundTubeViewController = UINavigationController(rootViewController: UIViewController())
+        roundTubeViewController = UINavigationController(rootViewController: RoundTubeViewController())
         roundTubeViewController.title = "Round Tube"
         roundTubeViewController.tabBarItem.image = UIImage(named: "TabBar/roundTube")
         
-        squareTubeViewController = UINavigationController(rootViewController: UIViewController())
+        squareTubeViewController = UINavigationController(rootViewController: SquareTubeViewController())
         squareTubeViewController.title = "Square Tube"
         squareTubeViewController.tabBarItem.image = UIImage(named: "TabBar/squareTube")
         

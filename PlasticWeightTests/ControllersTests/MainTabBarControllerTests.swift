@@ -39,6 +39,32 @@ class MainTabBarControllerTests: XCTestCase {
     }
     
     
+    // Make sure each tabbare view controller's root vc is of its own type
+    func test_SheetBarViewControllerRootViewController_IsSheetBarViewController() {
+        let rootViewController = sut.sheetBarViewController.viewControllers[0]
+        
+        XCTAssertTrue(rootViewController is SheetBarViewController)
+    }
+    
+    func test_RodViewControllerRootViewController_IsRodViewController() {
+        let rootViewController = sut.rodViewController.viewControllers[0]
+        
+        XCTAssertTrue(rootViewController is RodViewController)
+    }
+    
+    func test_RoundTubeViewControllerRootViewController_IsRoundTubeViewController() {
+        let rootViewController = sut.roundTubeViewController.viewControllers[0]
+        
+        XCTAssertTrue(rootViewController is RoundTubeViewController)
+    }
+    
+    func test_SquareTubeiewControllerRootViewController_IsSquareTubeViewController() {
+        let rootViewController = sut.squareTubeViewController.viewControllers[0]
+        
+        XCTAssertTrue(rootViewController is SquareTubeViewController)
+    }
+    
+    
     // Make sure controllers are within tabbar's view controllers array
     func test_MainTabController_ContainsSheetBarViewController() {
         XCTAssertTrue((sut.viewControllers?.contains(sut.sheetBarViewController)) ?? false)
