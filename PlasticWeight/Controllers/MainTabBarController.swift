@@ -20,6 +20,9 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupView() {
+        tabBar.tintColor = .secondary
+        tabBar.isTranslucent = false
+        
         sheetBarViewController = UINavigationController(rootViewController: SheetBarViewController())
         sheetBarViewController.title = "Sheet / Bar"
         sheetBarViewController.tabBarItem.image = UIImage(named: "TabBar/sheet")
