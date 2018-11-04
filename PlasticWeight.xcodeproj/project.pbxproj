@@ -16,6 +16,11 @@
 		9FBF2BCE218E5B1A009212BE /* PlasticMaterialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BCD218E5B1A009212BE /* PlasticMaterialTests.swift */; };
 		9FBF2BD0218E5B96009212BE /* Plastic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BCF218E5B96009212BE /* Plastic.swift */; };
 		9FBF2BD6218E8CFB009212BE /* PlasticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BD5218E8CFB009212BE /* PlasticManager.swift */; };
+		9FBF2BD8218E9812009212BE /* CalculationFunctionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BD7218E9812009212BE /* CalculationFunctionsTest.swift */; };
+		9FBF2BDA218E9851009212BE /* CalculationFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BD9218E9851009212BE /* CalculationFunctions.swift */; };
+		9FBF2BDC218E9892009212BE /* CalculationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BDB218E9892009212BE /* CalculationError.swift */; };
+		9FBF2BDE218E98F4009212BE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BDD218E98F4009212BE /* Extensions.swift */; };
+		9FBF2BE0218E9950009212BE /* CalculationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BDF218E9950009212BE /* CalculationErrorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		9FBF2BCD218E5B1A009212BE /* PlasticMaterialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasticMaterialTests.swift; sourceTree = "<group>"; };
 		9FBF2BCF218E5B96009212BE /* Plastic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plastic.swift; sourceTree = "<group>"; };
 		9FBF2BD5218E8CFB009212BE /* PlasticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasticManager.swift; sourceTree = "<group>"; };
+		9FBF2BD7218E9812009212BE /* CalculationFunctionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationFunctionsTest.swift; sourceTree = "<group>"; };
+		9FBF2BD9218E9851009212BE /* CalculationFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationFunctions.swift; sourceTree = "<group>"; };
+		9FBF2BDB218E9892009212BE /* CalculationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationError.swift; sourceTree = "<group>"; };
+		9FBF2BDD218E98F4009212BE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9FBF2BDF218E9950009212BE /* CalculationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationErrorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +179,9 @@
 		9FBF2BCA218E4AB9009212BE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9FBF2BD9218E9851009212BE /* CalculationFunctions.swift */,
+				9FBF2BDB218E9892009212BE /* CalculationError.swift */,
+				9FBF2BDD218E98F4009212BE /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -176,6 +189,8 @@
 		9FBF2BCB218E4AD1009212BE /* UtilsTests */ = {
 			isa = PBXGroup;
 			children = (
+				9FBF2BD7218E9812009212BE /* CalculationFunctionsTest.swift */,
+				9FBF2BDF218E9950009212BE /* CalculationErrorTests.swift */,
 			);
 			path = UtilsTests;
 			sourceTree = "<group>";
@@ -320,6 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBF2BD0218E5B96009212BE /* Plastic.swift in Sources */,
+				9FBF2BDE218E98F4009212BE /* Extensions.swift in Sources */,
+				9FBF2BDA218E9851009212BE /* CalculationFunctions.swift in Sources */,
+				9FBF2BDC218E9892009212BE /* CalculationError.swift in Sources */,
 				9FBF2BD6218E8CFB009212BE /* PlasticManager.swift in Sources */,
 				9FBF2B96218E09BB009212BE /* AppDelegate.swift in Sources */,
 			);
@@ -330,6 +348,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBF2BAB218E09BD009212BE /* PlasticWeightTests.swift in Sources */,
+				9FBF2BD8218E9812009212BE /* CalculationFunctionsTest.swift in Sources */,
+				9FBF2BE0218E9950009212BE /* CalculationErrorTests.swift in Sources */,
 				9FBF2BCE218E5B1A009212BE /* PlasticMaterialTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
