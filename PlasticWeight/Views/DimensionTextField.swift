@@ -14,6 +14,10 @@ class DimensionTextField: UITextField {
     init(key: String?) {
         self.key = key
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        setupView()
+    }
+    
+    private func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 10.00
         layer.borderColor = UIColor.secondary.cgColor
