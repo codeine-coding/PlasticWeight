@@ -24,7 +24,7 @@ class CalculationFunctionsTest: XCTestCase {
         let width = "48"
         let length = "96"
         
-        XCTAssertEqual(try calculateSheet(factor: factor, thickness: thickness, width: width, length: length), 44.2, "1/4 x 48 x 96 Acrylic should equal 44.2lbs")
+        XCTAssertEqual(try calculateSheet(factor: factor, thickness: thickness, width: width, length: length), 44.2)
     }
     
     func test_AcrylicRodWeightCalc() {
