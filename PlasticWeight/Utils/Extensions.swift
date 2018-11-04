@@ -6,10 +6,24 @@
 //  Copyright © 2018 Codeine Technologies LLC. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension Double {
     var roundMax3DecimalPlaces: Double {
         return Darwin.round(self * 1000.0) / 1000
+    }
+}
+
+extension UIColor {
+    static var primary: UIColor {
+        return #colorLiteral(red: 0.3313614726, green: 0.1370666325, blue: 0.4729859829, alpha: 1)
+    }
+    
+    static var secondary: UIColor {
+        return #colorLiteral(red: 0.5725490196, green: 0.1529411765, blue: 0.5607843137, alpha: 1)
+    }
+    
+    static var error: UIColor {
+        return #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
     }
 }
