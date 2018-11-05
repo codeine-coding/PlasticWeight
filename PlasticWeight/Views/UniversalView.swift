@@ -236,7 +236,7 @@ class UniversalView: UIView {
         case .sheetBar:
             materialTypeImage.image = UIImage(named: "sheetBar")
         case .rod:
-            materialTypeImage.image = UIImage(named: "rod")
+            materialTypeImage.image = UIImage(named: "roundRod")
         case .roundTube:
             materialTypeImage.image = UIImage(named: "roundTube")
         case .squareTube:
