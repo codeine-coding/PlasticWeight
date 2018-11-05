@@ -42,6 +42,7 @@
 		9FBF2C1321903F6D009212BE /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1221903F6D009212BE /* ErrorMessages.swift */; };
 		9FBF2C152190523C009212BE /* RodViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C142190523C009212BE /* RodViewControllerTests.swift */; };
 		9FBF2C1721905932009212BE /* RoundTubeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */; };
+		9FBF2C19219109CA009212BE /* SquareTubeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C18219109CA009212BE /* SquareTubeViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		9FBF2C1221903F6D009212BE /* ErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		9FBF2C142190523C009212BE /* RodViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodViewControllerTests.swift; sourceTree = "<group>"; };
 		9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTubeViewControllerTests.swift; sourceTree = "<group>"; };
+		9FBF2C18219109CA009212BE /* SquareTubeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTubeViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 				9FBF2C04218FF589009212BE /* SheetBarViewControllerTests.swift */,
 				9FBF2C142190523C009212BE /* RodViewControllerTests.swift */,
 				9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */,
+				9FBF2C18219109CA009212BE /* SquareTubeViewControllerTests.swift */,
 			);
 			path = ControllersTests;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBF2BAB218E09BD009212BE /* PlasticWeightTests.swift in Sources */,
+				9FBF2C19219109CA009212BE /* SquareTubeViewControllerTests.swift in Sources */,
 				9FBF2C152190523C009212BE /* RodViewControllerTests.swift in Sources */,
 				9FBF2BD8218E9812009212BE /* CalculationFunctionsTest.swift in Sources */,
 				9FBF2C1721905932009212BE /* RoundTubeViewControllerTests.swift in Sources */,

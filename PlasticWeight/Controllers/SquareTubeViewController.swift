@@ -9,22 +9,31 @@
 import UIKit
 
 class SquareTubeViewController: UIViewController {
+    var outerSquareWidthTextField: DimensionTextField!
+    var wallTextField: DimensionTextField!
+    var lengthTextField: DimensionTextField!
+    var dimensionFields: [DimensionTextField]!
+    
+    var squareTubeView: UniversalView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.barStyle = .blackTranslucent
+        navigationItem.title = "Round Tube"
+        
+        outerSquareWidthTextField = DimensionTextField(titleForLabel: "(O)uter (S)q. Width")
+        wallTextField = DimensionTextField(titleForLabel: "(W)all")
+        lengthTextField = DimensionTextField(titleForLabel: "(L)ength")
+        
+        dimensionFields = [outerSquareWidthTextField, wallTextField, lengthTextField]
+        
+        squareTubeView = UniversalView(dimensionFields: dimensionFields, calculation: .squareTube)
+        squareTubeView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(squareTubeView)
+        squareTubeView.edgeToEdgeConstraints(in: view)
+        
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
