@@ -13,7 +13,7 @@ class DimensionTextFieldTests: XCTestCase {
     var heightField: DimensionTextField!
 
     override func setUp() {
-        heightField = DimensionTextField(key: "height")
+        heightField = DimensionTextField(titleForLabel: "height")
     }
 
     override func tearDown() {
@@ -21,7 +21,7 @@ class DimensionTextFieldTests: XCTestCase {
     }
     
     func test_HeightFieldKey_WasSet() {
-        XCTAssertEqual(heightField.key, "height")
+        XCTAssertEqual(heightField.titleForLabel, "height")
     }
     
     func test_HeightField_Clears() {

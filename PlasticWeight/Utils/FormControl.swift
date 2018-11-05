@@ -9,8 +9,7 @@
 import Foundation
 
 protocol FormControl {
-    var key: String? { get }
-    var text: String? { get }
+    var titleForLabel: String? { get }
     
     func clear()
 }
