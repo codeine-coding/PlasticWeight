@@ -9,11 +9,26 @@
 import UIKit
 
 class RodViewController: UIViewController {
+    var diameterTextField: DimensionTextField!
+    var lengthTextField: DimensionTextField!
+    var dimensionFields: [DimensionTextField]!
+    
+    var rodView: UniversalView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.barStyle = .blackTranslucent
+        navigationItem.title = "Rod"
+        
+        diameterTextField = DimensionTextField(titleForLabel: "(D)iameter")
+        lengthTextField = DimensionTextField(titleForLabel: "(L)ength")
+        dimensionFields = [diameterTextField, lengthTextField]
+        
+        rodView = UniversalView(dimensionFields: dimensionFields, calculation: .rod)
+        rodView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(rodView)
+        
+        rodView.edgeToEdgeConstraints(in: view)
     }
 
 }
