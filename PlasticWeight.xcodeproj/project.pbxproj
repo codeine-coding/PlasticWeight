@@ -27,6 +27,19 @@
 		9FBF2BE9218ED7E4009212BE /* RodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BE8218ED7E4009212BE /* RodViewController.swift */; };
 		9FBF2BEB218ED8B0009212BE /* RoundTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BEA218ED8B0009212BE /* RoundTubeViewController.swift */; };
 		9FBF2BED218ED8C1009212BE /* SquareTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BEC218ED8C1009212BE /* SquareTubeViewController.swift */; };
+		9FBF2BF0218EDEB6009212BE /* FormControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BEE218EDEB5009212BE /* FormControl.swift */; };
+		9FBF2BF5218EDF2B009212BE /* UniversalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BF4218EDF2B009212BE /* UniversalView.swift */; };
+		9FBF2BF7218EDFD6009212BE /* MaterialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BF6218EDFD6009212BE /* MaterialType.swift */; };
+		9FBF2BF9218EE3BD009212BE /* DimensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BF8218EE3BD009212BE /* DimensionTextField.swift */; };
+		9FBF2BFF218F4D81009212BE /* UniversalViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BFE218F4D81009212BE /* UniversalViewTests.swift */; };
+		9FBF2C01218F878E009212BE /* DimensionTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C00218F878E009212BE /* DimensionTextFieldTests.swift */; };
+		9FBF2C05218FF589009212BE /* SheetBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C04218FF589009212BE /* SheetBarViewControllerTests.swift */; };
+		9FBF2C09219008BF009212BE /* DimensionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C08219008BF009212BE /* DimensionLabel.swift */; };
+		9FBF2C0B21900FA6009212BE /* RadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C0A21900FA6009212BE /* RadiusButton.swift */; };
+		9FBF2C0D21901A8D009212BE /* UniversalView+PickerViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C0C21901A8D009212BE /* UniversalView+PickerViewExtension.swift */; };
+		9FBF2C0F21903763009212BE /* TextFieldStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C0E21903763009212BE /* TextFieldStackView.swift */; };
+		9FBF2C1121903DEB009212BE /* UniversalView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1021903DEB009212BE /* UniversalView+Constraints.swift */; };
+		9FBF2C1321903F6D009212BE /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1221903F6D009212BE /* ErrorMessages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +86,19 @@
 		9FBF2BE8218ED7E4009212BE /* RodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodViewController.swift; sourceTree = "<group>"; };
 		9FBF2BEA218ED8B0009212BE /* RoundTubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTubeViewController.swift; sourceTree = "<group>"; };
 		9FBF2BEC218ED8C1009212BE /* SquareTubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTubeViewController.swift; sourceTree = "<group>"; };
+		9FBF2BEE218EDEB5009212BE /* FormControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormControl.swift; sourceTree = "<group>"; };
+		9FBF2BF4218EDF2B009212BE /* UniversalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalView.swift; sourceTree = "<group>"; };
+		9FBF2BF6218EDFD6009212BE /* MaterialType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialType.swift; sourceTree = "<group>"; };
+		9FBF2BF8218EE3BD009212BE /* DimensionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionTextField.swift; sourceTree = "<group>"; };
+		9FBF2BFE218F4D81009212BE /* UniversalViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalViewTests.swift; sourceTree = "<group>"; };
+		9FBF2C00218F878E009212BE /* DimensionTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionTextFieldTests.swift; sourceTree = "<group>"; };
+		9FBF2C04218FF589009212BE /* SheetBarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBarViewControllerTests.swift; sourceTree = "<group>"; };
+		9FBF2C08219008BF009212BE /* DimensionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionLabel.swift; sourceTree = "<group>"; };
+		9FBF2C0A21900FA6009212BE /* RadiusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusButton.swift; sourceTree = "<group>"; };
+		9FBF2C0C21901A8D009212BE /* UniversalView+PickerViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UniversalView+PickerViewExtension.swift"; sourceTree = "<group>"; };
+		9FBF2C0E21903763009212BE /* TextFieldStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStackView.swift; sourceTree = "<group>"; };
+		9FBF2C1021903DEB009212BE /* UniversalView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UniversalView+Constraints.swift"; sourceTree = "<group>"; };
+		9FBF2C1221903F6D009212BE /* ErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +163,10 @@
 		9FBF2BA9218E09BD009212BE /* PlasticWeightTests */ = {
 			isa = PBXGroup;
 			children = (
-				9FBF2BE1218EAB85009212BE /* ControllersTests */,
-				9FBF2BCC218E4AEF009212BE /* ModelsTest */,
 				9FBF2BCB218E4AD1009212BE /* UtilsTests */,
+				9FBF2BCC218E4AEF009212BE /* ModelsTest */,
+				9FBF2BFD218F4D4E009212BE /* ViewsTests */,
+				9FBF2BE1218EAB85009212BE /* ControllersTests */,
 				9FBF2BAA218E09BD009212BE /* PlasticWeightTests.swift */,
 				9FBF2BAC218E09BD009212BE /* Info.plist */,
 			);
@@ -160,6 +187,7 @@
 			children = (
 				9FBF2BCF218E5B96009212BE /* Plastic.swift */,
 				9FBF2BD5218E8CFB009212BE /* PlasticManager.swift */,
+				9FBF2BF6218EDFD6009212BE /* MaterialType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +207,13 @@
 		9FBF2BC8218E4981009212BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FBF2C0A21900FA6009212BE /* RadiusButton.swift */,
+				9FBF2BF8218EE3BD009212BE /* DimensionTextField.swift */,
+				9FBF2C08219008BF009212BE /* DimensionLabel.swift */,
+				9FBF2C0E21903763009212BE /* TextFieldStackView.swift */,
+				9FBF2BF4218EDF2B009212BE /* UniversalView.swift */,
+				9FBF2C0C21901A8D009212BE /* UniversalView+PickerViewExtension.swift */,
+				9FBF2C1021903DEB009212BE /* UniversalView+Constraints.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,8 +232,10 @@
 		9FBF2BCA218E4AB9009212BE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9FBF2BEE218EDEB5009212BE /* FormControl.swift */,
 				9FBF2BD9218E9851009212BE /* CalculationFunctions.swift */,
 				9FBF2BDB218E9892009212BE /* CalculationError.swift */,
+				9FBF2C1221903F6D009212BE /* ErrorMessages.swift */,
 				9FBF2BDD218E98F4009212BE /* Extensions.swift */,
 			);
 			path = Utils;
@@ -225,8 +262,18 @@
 			isa = PBXGroup;
 			children = (
 				9FBF2BE2218EABE9009212BE /* MainTabBarControllerTests.swift */,
+				9FBF2C04218FF589009212BE /* SheetBarViewControllerTests.swift */,
 			);
 			path = ControllersTests;
+			sourceTree = "<group>";
+		};
+		9FBF2BFD218F4D4E009212BE /* ViewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FBF2BFE218F4D81009212BE /* UniversalViewTests.swift */,
+				9FBF2C00218F878E009212BE /* DimensionTextFieldTests.swift */,
+			);
+			path = ViewsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,14 +409,24 @@
 			files = (
 				9FBF2BD0218E5B96009212BE /* Plastic.swift in Sources */,
 				9FBF2BEB218ED8B0009212BE /* RoundTubeViewController.swift in Sources */,
+				9FBF2C1121903DEB009212BE /* UniversalView+Constraints.swift in Sources */,
+				9FBF2C0D21901A8D009212BE /* UniversalView+PickerViewExtension.swift in Sources */,
 				9FBF2BDE218E98F4009212BE /* Extensions.swift in Sources */,
 				9FBF2BDA218E9851009212BE /* CalculationFunctions.swift in Sources */,
+				9FBF2C1321903F6D009212BE /* ErrorMessages.swift in Sources */,
 				9FBF2BE5218EACC6009212BE /* MainTabBarController.swift in Sources */,
+				9FBF2BF0218EDEB6009212BE /* FormControl.swift in Sources */,
+				9FBF2BF5218EDF2B009212BE /* UniversalView.swift in Sources */,
 				9FBF2BE9218ED7E4009212BE /* RodViewController.swift in Sources */,
 				9FBF2BE7218ED65D009212BE /* SheetBarViewController.swift in Sources */,
 				9FBF2BDC218E9892009212BE /* CalculationError.swift in Sources */,
+				9FBF2C0B21900FA6009212BE /* RadiusButton.swift in Sources */,
+				9FBF2C0F21903763009212BE /* TextFieldStackView.swift in Sources */,
+				9FBF2BF9218EE3BD009212BE /* DimensionTextField.swift in Sources */,
 				9FBF2BD6218E8CFB009212BE /* PlasticManager.swift in Sources */,
 				9FBF2B96218E09BB009212BE /* AppDelegate.swift in Sources */,
+				9FBF2C09219008BF009212BE /* DimensionLabel.swift in Sources */,
+				9FBF2BF7218EDFD6009212BE /* MaterialType.swift in Sources */,
 				9FBF2BED218ED8C1009212BE /* SquareTubeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,8 +437,11 @@
 			files = (
 				9FBF2BAB218E09BD009212BE /* PlasticWeightTests.swift in Sources */,
 				9FBF2BD8218E9812009212BE /* CalculationFunctionsTest.swift in Sources */,
+				9FBF2C01218F878E009212BE /* DimensionTextFieldTests.swift in Sources */,
 				9FBF2BE3218EABE9009212BE /* MainTabBarControllerTests.swift in Sources */,
 				9FBF2BE0218E9950009212BE /* CalculationErrorTests.swift in Sources */,
+				9FBF2BFF218F4D81009212BE /* UniversalViewTests.swift in Sources */,
+				9FBF2C05218FF589009212BE /* SheetBarViewControllerTests.swift in Sources */,
 				9FBF2BCE218E5B1A009212BE /* PlasticMaterialTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,7 +604,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
 				INFOPLIST_FILE = PlasticWeight/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -563,7 +623,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
 				INFOPLIST_FILE = PlasticWeight/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
