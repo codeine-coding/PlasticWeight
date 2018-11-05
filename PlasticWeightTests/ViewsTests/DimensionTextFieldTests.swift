@@ -7,27 +7,27 @@
 //
 
 import XCTest
+@testable import PlasticWeight
 
 class DimensionTextFieldTests: XCTestCase {
+    var heightField: DimensionTextField!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        heightField = DimensionTextField(key: "height")
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        heightField = nil
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func test_HeightFieldKey_WasSet() {
+        XCTAssertEqual(heightField.key, "height")
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_HeightField_Clears() {
+        heightField.text = "12"
+        heightField.clear()
+        XCTAssertEqual(heightField.text, "")
     }
 
 }
