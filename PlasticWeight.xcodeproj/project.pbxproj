@@ -41,6 +41,7 @@
 		9FBF2C1121903DEB009212BE /* UniversalView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1021903DEB009212BE /* UniversalView+Constraints.swift */; };
 		9FBF2C1321903F6D009212BE /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1221903F6D009212BE /* ErrorMessages.swift */; };
 		9FBF2C152190523C009212BE /* RodViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C142190523C009212BE /* RodViewControllerTests.swift */; };
+		9FBF2C1721905932009212BE /* RoundTubeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		9FBF2C1021903DEB009212BE /* UniversalView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UniversalView+Constraints.swift"; sourceTree = "<group>"; };
 		9FBF2C1221903F6D009212BE /* ErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		9FBF2C142190523C009212BE /* RodViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodViewControllerTests.swift; sourceTree = "<group>"; };
+		9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTubeViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 				9FBF2BE2218EABE9009212BE /* MainTabBarControllerTests.swift */,
 				9FBF2C04218FF589009212BE /* SheetBarViewControllerTests.swift */,
 				9FBF2C142190523C009212BE /* RodViewControllerTests.swift */,
+				9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */,
 			);
 			path = ControllersTests;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				9FBF2BAB218E09BD009212BE /* PlasticWeightTests.swift in Sources */,
 				9FBF2C152190523C009212BE /* RodViewControllerTests.swift in Sources */,
 				9FBF2BD8218E9812009212BE /* CalculationFunctionsTest.swift in Sources */,
+				9FBF2C1721905932009212BE /* RoundTubeViewControllerTests.swift in Sources */,
 				9FBF2C01218F878E009212BE /* DimensionTextFieldTests.swift in Sources */,
 				9FBF2BE3218EABE9009212BE /* MainTabBarControllerTests.swift in Sources */,
 				9FBF2BE0218E9950009212BE /* CalculationErrorTests.swift in Sources */,

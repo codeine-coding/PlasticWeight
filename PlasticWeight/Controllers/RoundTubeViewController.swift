@@ -9,22 +9,30 @@
 import UIKit
 
 class RoundTubeViewController: UIViewController {
+    var outerDiameterTextField: DimensionTextField!
+    var wallTextField: DimensionTextField!
+    var lengthTextField: DimensionTextField!
+    var dimensionFields: [DimensionTextField]!
+    
+    var roundTubeView: UniversalView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.barStyle = .blackTranslucent
+        navigationItem.title = "Round Tube"
+        
+        outerDiameterTextField = DimensionTextField(titleForLabel: "(O)uter (D)iameter")
+        wallTextField = DimensionTextField(titleForLabel: "(W)all")
+        lengthTextField = DimensionTextField(titleForLabel: "(L)ength")
+        
+        dimensionFields = [outerDiameterTextField, wallTextField, lengthTextField]
+        
+        roundTubeView = UniversalView(dimensionFields: dimensionFields, calculation: .roundTube)
+        roundTubeView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(roundTubeView)
+        roundTubeView.edgeToEdgeConstraints(in: view)
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
