@@ -37,12 +37,7 @@ class SheetBarViewController: UIViewController {
         
         view.addSubview(sheetBarView)
         
-        NSLayoutConstraint.activate([
-            sheetBarView.topAnchor.constraint(equalTo: view.topAnchor),
-            sheetBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            sheetBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            sheetBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        sheetBarView.edgeToEdgeConstraints(in: view)
         
     }
 
