@@ -187,7 +187,7 @@ class UniversalView: UIView {
     private func setupDimensionsInputStack() {
         textFieldStacks = [TextFieldStackView](repeating: TextFieldStackView() , count: dimensionFields.count)
         dimensionLabels = Array(repeating: DimensionLabel(), count: dimensionFields.count)
-
+        
         for index in 0..<dimensionFields.count {
             dimensionLabels[index] = DimensionLabel()
             textFieldStacks[index] = TextFieldStackView()
@@ -265,33 +265,32 @@ class UniversalView: UIView {
             do {
                 weightLabel.textColor = .secondary
                 
-                let calculatedValue: Double!
-                
+                var calculatedValue: Double
                 switch materialType {
                 case .sheetBar:
                     calculatedValue = try calculateSheet(factor: selectedMaterialFactor!,
-                                                             thickness: dimensionLabels[0].text!,
-                                                             width: dimensionLabels[1].text!,
-                                                             length: dimensionLabels[2].text!)
+                                                         thickness: dimensionFields[0].text!,
+                                                         width: dimensionFields[1].text!,
+                                                         length: dimensionFields[2].text!)
                 case .rod:
                     calculatedValue = try calculateRoundRod(factor: selectedMaterialFactor!,
-                                                            diameter: dimensionLabels[0].text!,
-                                                            length: dimensionLabels[1].text!)
+                                                            diameter: dimensionFields[0].text!,
+                                                            length: dimensionFields[1].text!)
                 case .roundTube:
                     calculatedValue = try calculateRoundTube(factor: selectedMaterialFactor!,
-                                                             outsideDiameter: dimensionLabels[0].text!,
-                                                             wall: dimensionLabels[1].text!,
-                                                             length: dimensionLabels[2].text!)
+                                                             outsideDiameter: dimensionFields[0].text!,
+                                                             wall: dimensionFields[1].text!,
+                                                             length: dimensionFields[2].text!)
                 case .squareTube:
                     calculatedValue = try calculateSquareTube(factor: selectedMaterialFactor!,
-                                                              outsideSquareWidth: dimensionLabels[0].text!,
-                                                              wall: dimensionLabels[1].text!,
-                                                              length: dimensionLabels[2].text!)
+                                                              outsideSquareWidth: dimensionFields[0].text!,
+                                                              wall: dimensionFields[1].text!,
+                                                              length: dimensionFields[2].text!)
                 }
                 
                 weightLabel.text = String(calculatedValue)
                 poundsLabel.isHidden = false
-
+                
             } catch CalculationError.invalidInput {
                 errorLabel(for: weightLabel, hiddenLabel: poundsLabel, errorMessge: ErrorMessage.invalidInputErrorMessage)
             } catch CalculationError.zeroValue {
@@ -304,7 +303,9 @@ class UniversalView: UIView {
     }
     
     @objc private func clearFieldsBtnPressed(_ sender: Any) {
-        materialTextField.text = ""
+        selectedMaterial  = nil
+        selectedMaterialFactor = nil
+        materialTextField.text = nil
         dimensionFields.forEach { $0.clear() }
         weightLabel.isHidden = true
         poundsLabel.isHidden = true

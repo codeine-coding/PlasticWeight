@@ -12,8 +12,8 @@ extension UniversalView {
     
     internal func displayConstraints() {
         let safeArea = safeAreaLayoutGuide
-        let imageWidth = bounds.width - 32
-        let screenWdith = frame.width
+        let imageWidth = UIScreen.main.bounds.width - 32
+        let screenWdith = imageWidth + 32
         
         sharedConstraints.append(contentsOf: [
             materialChoiceStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 16),
