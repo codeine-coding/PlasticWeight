@@ -23,4 +23,10 @@ platform :ios do
     build_app(scheme: "PlasticWeight")
     upload_to_testflight
   end
+
+  desc "capture and deliver screenshots"
+  lane :screenshots do
+    capture_screenshots
+    upload_to_app_store
+  end
 end
