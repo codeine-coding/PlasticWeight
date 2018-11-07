@@ -1,0 +1,8 @@
+app_identifier("com.codeinetech.PlasticWeight") # The bundle identifier of your app
+apple_id("awhearry@gmail.com") # Your Apple email address
+
+itc_team_id("117186907") # App Store Connect Team ID
+team_id("HZQ3ZGBLE6") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

@@ -43,6 +43,7 @@
 		9FBF2C152190523C009212BE /* RodViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C142190523C009212BE /* RodViewControllerTests.swift */; };
 		9FBF2C1721905932009212BE /* RoundTubeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */; };
 		9FBF2C19219109CA009212BE /* SquareTubeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C18219109CA009212BE /* SquareTubeViewControllerTests.swift */; };
+		9FBF2C1B219291AF009212BE /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1A219291AF009212BE /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		9FBF2C142190523C009212BE /* RodViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodViewControllerTests.swift; sourceTree = "<group>"; };
 		9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTubeViewControllerTests.swift; sourceTree = "<group>"; };
 		9FBF2C18219109CA009212BE /* SquareTubeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTubeViewControllerTests.swift; sourceTree = "<group>"; };
+		9FBF2C1A219291AF009212BE /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 		9FBF2BB4218E09BD009212BE /* PlasticWeightUITests */ = {
 			isa = PBXGroup;
 			children = (
+				9FBF2C1A219291AF009212BE /* SnapshotHelper.swift */,
 				9FBF2BB5218E09BE009212BE /* PlasticWeightUITests.swift */,
 				9FBF2BB7218E09BE009212BE /* Info.plist */,
 			);
@@ -463,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBF2BB6218E09BE009212BE /* PlasticWeightUITests.swift in Sources */,
+				9FBF2C1B219291AF009212BE /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +532,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -589,6 +594,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
