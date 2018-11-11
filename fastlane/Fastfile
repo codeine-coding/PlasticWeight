@@ -20,9 +20,7 @@ platform :ios do
   lane :beta do
     get_certificates
     get_provisioning_profile
-    increment_build_number(
-      build_number: "1.01"
-    ) 
+    increment_build_number 
     build_app(scheme: "PlasticWeight")
     upload_to_testflight
   end
