@@ -18,20 +18,20 @@ class UniversalView: UIView {
     private var textFieldStacks = [TextFieldStackView]()
     
     
-    // Internal variables
-    internal var plasticManager = PlasticManager()
+    // variables
+    var plasticManager = PlasticManager()
     
     
-    internal var selectedMaterial: String?
-    internal var selectedMaterialFactor: Double?
+    var selectedMaterial: String?
+    var selectedMaterialFactor: Double?
     
     // NSConstraints
-    internal var sharedConstraints: [NSLayoutConstraint] = []
-    internal var SEConstraints: [NSLayoutConstraint] = []
-    internal var greaterThanSEConstraints: [NSLayoutConstraint] = []
+    var sharedConstraints: [NSLayoutConstraint] = []
+    var SEConstraints: [NSLayoutConstraint] = []
+    var greaterThanSEConstraints: [NSLayoutConstraint] = []
     
     // material Choice Stack
-    internal var materialTextField: UITextField = {
+    var materialTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.textColor = .primary
@@ -41,7 +41,7 @@ class UniversalView: UIView {
         return textField
     }()
     
-    internal var materialUnderlineView: UIView = {
+    var materialUnderlineView: UIView = {
         let underline = UIView()
         underline.translatesAutoresizingMaskIntoConstraints = false
         underline.heightAnchor.constraint(equalToConstant: 2).isActive = true
@@ -49,7 +49,7 @@ class UniversalView: UIView {
         return underline
     }()
     
-    internal var materialChoiceStackView: UIStackView = {
+    var materialChoiceStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .vertical
@@ -58,10 +58,10 @@ class UniversalView: UIView {
     }()
     
     // Picker
-    internal var materialPicker: UIPickerView = UIPickerView()
+    var materialPicker: UIPickerView = UIPickerView()
     
     // Keyboard & Picker Toolbar
-    internal var textFieldEditingToolBar: UIToolbar = {
+    var textFieldEditingToolBar: UIToolbar = {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         toolbar.tintColor = .primary
@@ -71,7 +71,7 @@ class UniversalView: UIView {
     }()
     
     // Dimensions Stack
-    internal var dimensionsStackView: UIStackView = {
+    var dimensionsStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .horizontal
@@ -82,7 +82,7 @@ class UniversalView: UIView {
     }()
     
     // Weight Pound Stack
-    internal var weightLabel: UILabel = {
+    var weightLabel: UILabel = {
         let label = UILabel()
         label.text = "Label"
         label.textColor = .secondary
@@ -93,7 +93,7 @@ class UniversalView: UIView {
         return label
     }()
     
-    internal var poundsLabel: UILabel = {
+    var poundsLabel: UILabel = {
         let label = UILabel()
         label.text = "Pounds"
         label.textColor = .primary
@@ -102,7 +102,7 @@ class UniversalView: UIView {
         return label
     }()
     
-    internal var weightPoundStackView: UIStackView = {
+    var weightPoundStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .vertical
@@ -113,7 +113,7 @@ class UniversalView: UIView {
     }()
     
     // Calc & Clear Button Stack
-    internal var calculateBtn:  RadiusButton = {
+    var calculateBtn:  RadiusButton = {
         let btn = RadiusButton()
         btn.setTitle("Calculate", for: .normal)
         btn.setTitleColor(.white, for: .normal)
@@ -121,7 +121,7 @@ class UniversalView: UIView {
         return btn
     }()
     
-    internal var clearFieldsBtn: RadiusButton = {
+    var clearFieldsBtn: RadiusButton = {
         let btn = RadiusButton()
         btn.setTitle("Clear Fields", for: .normal)
         btn.setTitleColor(.primary, for: .normal)
@@ -131,7 +131,7 @@ class UniversalView: UIView {
         return btn
     }()
     
-    internal var buttonStackView: UIStackView = {
+    var buttonStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .vertical
@@ -140,7 +140,7 @@ class UniversalView: UIView {
         return sv
     }()
     
-    internal var materialTypeImage: UIImageView!
+    var materialTypeImage: UIImageView!
     
     
     // Methods
@@ -151,7 +151,7 @@ class UniversalView: UIView {
         setupView()
     }
     
-    internal func setupView(){
+    func setupView(){
         backgroundColor = .white
         addSubview(materialChoiceStackView)
         materialChoiceStackView.addArrangedSubview(materialTextField)

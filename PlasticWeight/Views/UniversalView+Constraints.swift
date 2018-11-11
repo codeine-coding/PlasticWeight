@@ -10,7 +10,7 @@ import UIKit
 
 extension UniversalView {
     
-    internal func displayConstraints() {
+    func displayConstraints() {
         let safeArea = safeAreaLayoutGuide
         let imageWidth = UIScreen.main.bounds.width - 32
         let screenWdith = imageWidth + 32
@@ -31,7 +31,7 @@ extension UniversalView {
             ])
         
         greaterThanSEConstraints.append(contentsOf: [
-            materialTypeImage.topAnchor.constraint(equalTo: dimensionsStackView.topAnchor, constant: 16),
+            materialTypeImage.topAnchor.constraint(equalTo: dimensionsStackView.topAnchor, constant: 32),
             materialTypeImage.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.80),
             
             weightPoundStackView.centerYAnchor.constraint(equalTo: materialTypeImage.centerYAnchor),
@@ -43,7 +43,7 @@ extension UniversalView {
             ])
         
         SEConstraints.append(contentsOf: [
-            materialTypeImage.topAnchor.constraint(equalTo: dimensionsStackView.topAnchor, constant: 8), // FIX
+            materialTypeImage.topAnchor.constraint(equalTo: dimensionsStackView.topAnchor, constant: 8),
             materialTypeImage.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.60),
             
             weightPoundStackView.centerYAnchor.constraint(equalTo: materialTypeImage.centerYAnchor, constant: -24),
