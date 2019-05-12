@@ -27,8 +27,13 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    get_certificates
-    get_provisioning_profile
+    get_certificates(
+      username: "awhearry@gmail.com"
+    )
+    get_provisioning_profile(
+      username: "awhearry@gmail.com",
+      app_identifier: "com.codeinetech.PlasticWeight"
+      )
     increment_build_number 
     gym
     upload_to_testflight

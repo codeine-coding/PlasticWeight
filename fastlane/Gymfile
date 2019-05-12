@@ -13,7 +13,7 @@
 project("PlasticWeight.xcodeproj")
 output_directory("./build")
 clean(true)
-output_name("PlasticWeight"
+output_name("PlasticWeight")
 configuration("Release")
 export_method("app-store")
 build_path("./build/archive")
