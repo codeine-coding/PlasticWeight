@@ -35,7 +35,7 @@ platform :ios do
       username: $username
     )
     get_provisioning_profile(
-      username: $username
+      username: $username,
       app_identifier: $app_identifier
       )
     increment_build_number 
