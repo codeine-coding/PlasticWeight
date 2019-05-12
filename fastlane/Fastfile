@@ -27,7 +27,9 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    get_certificates
+    get_certificates(
+      username: "awhearry@gmail.com"
+    )
     get_provisioning_profile
     increment_build_number 
     build_app(scheme: "PlasticWeight")
