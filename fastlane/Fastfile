@@ -27,12 +27,10 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    get_certificates(
-      username: "awhearry@gmail.com"
-    )
+    get_certificates
     get_provisioning_profile
     increment_build_number 
-    build_app(scheme: "PlasticWeight")
+    gym
     upload_to_testflight
   end
 
@@ -42,6 +40,10 @@ platform :ios do
       show_diff: true
     )
     git_pull
+  end
+
+  lane :release do
+
   end
 
   desc "capture and deliver screenshots"
