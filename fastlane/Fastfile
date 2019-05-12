@@ -74,8 +74,6 @@ platform :ios do
     deliver(
       submit_for_review: true,
       automatic_release: true,
-      force: true,
-      itc_provider: "HZQ3ZGBLE6"
     )
 
   end
