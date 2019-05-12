@@ -60,6 +60,16 @@ platform :ios do
   end
 
   lane :release do
+    produce(
+      username: $username,
+      app_identifier: $app_identifier,
+      app_name: "Plastic Weight",
+      language: "English"
+      app_version: "1.0"
+    )
+    deliver(
+      submit_for_review: true
+    )
 
   end
 
