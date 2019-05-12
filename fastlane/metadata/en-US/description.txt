@@ -1,0 +1,2 @@
+
+This application will calculate the weight of plastic materials in either sheet/bar, round rod, square tube or round tube in pounds.
