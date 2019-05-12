@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FB8B1FC2287E3FD00AD393E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */; };
 		9FBF2B96218E09BB009212BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2B95218E09BB009212BE /* AppDelegate.swift */; };
 		9FBF2B9D218E09BD009212BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF2B9C218E09BD009212BE /* Assets.xcassets */; };
 		9FBF2BA0218E09BD009212BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF2B9E218E09BD009212BE /* LaunchScreen.storyboard */; };
@@ -43,7 +44,6 @@
 		9FBF2C152190523C009212BE /* RodViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C142190523C009212BE /* RodViewControllerTests.swift */; };
 		9FBF2C1721905932009212BE /* RoundTubeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */; };
 		9FBF2C19219109CA009212BE /* SquareTubeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C18219109CA009212BE /* SquareTubeViewControllerTests.swift */; };
-		9FBF2C1B219291AF009212BE /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2C1A219291AF009212BE /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		9FBF2B92218E09BB009212BE /* PlasticWeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlasticWeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBF2B95218E09BB009212BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FBF2B9C218E09BD009212BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		9FBF2C142190523C009212BE /* RodViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodViewControllerTests.swift; sourceTree = "<group>"; };
 		9FBF2C1621905932009212BE /* RoundTubeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTubeViewControllerTests.swift; sourceTree = "<group>"; };
 		9FBF2C18219109CA009212BE /* SquareTubeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTubeViewControllerTests.swift; sourceTree = "<group>"; };
-		9FBF2C1A219291AF009212BE /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +184,7 @@
 		9FBF2BB4218E09BD009212BE /* PlasticWeightUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9FBF2C1A219291AF009212BE /* SnapshotHelper.swift */,
+				9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */,
 				9FBF2BB5218E09BE009212BE /* PlasticWeightUITests.swift */,
 				9FBF2BB7218E09BE009212BE /* Info.plist */,
 			);
@@ -466,7 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBF2BB6218E09BE009212BE /* PlasticWeightUITests.swift in Sources */,
-				9FBF2C1B219291AF009212BE /* SnapshotHelper.swift in Sources */,
+				9FB8B1FC2287E3FD00AD393E /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
