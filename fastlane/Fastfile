@@ -31,8 +31,15 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    cert
-    sigh(force: true)
+    cert(
+      username: $username,
+      output_path: "./Certificates"
+    )
+    sigh(
+      username: $username,
+      app_identifier: $app_identifier,
+      output_path: "./Certificates"
+    )
     increment_build_number 
     gym
     upload_to_testflight(
