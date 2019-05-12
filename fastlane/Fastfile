@@ -61,7 +61,7 @@ platform :ios do
 
   lane :release do
     snapshot(
-      app_identifier: $app_identifier
+      app_identifier: $app_identifier,
       clear_previous_screenshots: true
     )
     produce(
@@ -75,7 +75,7 @@ platform :ios do
       submit_for_review: true,
       automatic_release: true,
       force: true,
-      itc_provider: "HZQ3ZGBLE6",
+      itc_provider: "HZQ3ZGBLE6"
     )
 
   end
