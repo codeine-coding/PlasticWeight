@@ -27,10 +27,6 @@ platform :ios do
       show_diff: true
     )
     git_pull
-  end
-
-  desc "Push a new beta build to TestFlight"
-  lane :beta do
     cert(
       username: $username,
       output_path: "./Certificates"
@@ -40,6 +36,10 @@ platform :ios do
       app_identifier: $app_identifier,
       output_path: "./Certificates"
     )
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
     increment_build_number 
     gym
     upload_to_testflight(
