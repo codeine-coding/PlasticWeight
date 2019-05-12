@@ -60,6 +60,10 @@ platform :ios do
   end
 
   lane :release do
+    snapshot(
+      app_identifier: $app_identifier
+      clear_previous_screenshots: true
+    )
     produce(
       username: $username,
       app_identifier: $app_identifier,
@@ -68,7 +72,10 @@ platform :ios do
       app_version: "1.0",
     )
     deliver(
-      submit_for_review: true
+      submit_for_review: true,
+      automatic_release: true,
+      force: true,
+      itc_provider: "HZQ3ZGBLE6",
     )
 
   end
