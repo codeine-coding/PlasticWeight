@@ -60,10 +60,6 @@ platform :ios do
   end
 
   lane :release do
-    snapshot(
-      app_identifier: $app_identifier,
-      clear_previous_screenshots: true
-    )
     produce(
       username: $username,
       app_identifier: $app_identifier,
@@ -80,8 +76,10 @@ platform :ios do
 
   desc "capture and deliver screenshots"
   lane :screenshots do
-    capture_screenshots
-    upload_to_app_store
+    snapshot(
+      app_identifier: $app_identifier,
+      clear_previous_screenshots: true
+    )
   end
 
   after_all do
