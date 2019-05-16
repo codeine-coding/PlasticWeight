@@ -43,25 +43,25 @@ class MainTabBarControllerTests: XCTestCase {
     func test_SheetBarViewControllerRootViewController_IsSheetBarViewController() {
         let rootViewController = sut.sheetBarViewController.viewControllers[0]
         
-        XCTAssertTrue(rootViewController is SheetBarViewController)
+        XCTAssertTrue(rootViewController is MainViewController)
     }
     
     func test_RodViewControllerRootViewController_IsRodViewController() {
         let rootViewController = sut.rodViewController.viewControllers[0]
         
-        XCTAssertTrue(rootViewController is RodViewController)
+        XCTAssertTrue(rootViewController is MainViewController)
     }
     
     func test_RoundTubeViewControllerRootViewController_IsRoundTubeViewController() {
         let rootViewController = sut.roundTubeViewController.viewControllers[0]
         
-        XCTAssertTrue(rootViewController is RoundTubeViewController)
+        XCTAssertTrue(rootViewController is MainViewController)
     }
     
     func test_SquareTubeiewControllerRootViewController_IsSquareTubeViewController() {
         let rootViewController = sut.squareTubeViewController.viewControllers[0]
         
-        XCTAssertTrue(rootViewController is SquareTubeViewController)
+        XCTAssertTrue(rootViewController is MainViewController)
     }
     
     

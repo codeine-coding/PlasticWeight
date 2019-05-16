@@ -11,21 +11,21 @@ import XCTest
 
 class UniversalViewTests: XCTestCase {
     var sut: UniversalView!
-    var sheetBarVC: SheetBarViewController!
+    var mainVC: MainViewController!
 
     override func setUp() {
-        sheetBarVC = SheetBarViewController()
-        sheetBarVC.loadViewIfNeeded()
+        mainVC = MainViewController()
+        mainVC.loadViewIfNeeded()
         let textFields: [DimensionTextField] = [
-            sheetBarVC.gaugeTextField,
-            sheetBarVC.widthTextfield,
-            sheetBarVC.lengthTextField
+            mainVC.gaugeTextField,
+            mainVC.widthTextfield,
+            mainVC.lengthTextField
         ]
         sut = UniversalView(dimensionFields: textFields, calculation: .sheetBar)
     }
 
     override func tearDown() {
-        sheetBarVC = nil
+        mainVC = nil
     }
     
     func test_HasMaterialTextField() {

@@ -9,27 +9,28 @@
 import UIKit
 
 class UniversalView: UIView {
-    // public variables
-    var dimensionFields: [DimensionTextField]
-    var materialType: MaterialType
-    
     // private variables
-    private var dimensionLabels = [DimensionLabel]()
-    private var textFieldStacks = [TextFieldStackView]()
-    
-    
-    // variables
+    var materialType: MaterialType
+    var dimensionFields: [DimensionTextField]
+    var dimensionLabels = [DimensionLabel]()
+    var textFieldStacks = [TextFieldStackView]()
+
     var plasticManager = PlasticManager()
-    
-    
+
     var selectedMaterial: String?
     var selectedMaterialFactor: Double?
+    var materialTypeImage: UIImageView!
     
     // NSConstraints
     var sharedConstraints: [NSLayoutConstraint] = []
     var SEConstraints: [NSLayoutConstraint] = []
     var greaterThanSEConstraints: [NSLayoutConstraint] = []
-    
+
+
+    //
+    // VIEW INIT CLOSURES
+    //
+
     // material Choice Stack
     var materialTextField: UITextField = {
         let textField = UITextField()
@@ -140,18 +141,21 @@ class UniversalView: UIView {
         return sv
     }()
     
-    var materialTypeImage: UIImageView!
-    
-    
-    // Methods
+    //
+    // METHODS
+    //
     init(dimensionFields: [DimensionTextField], calculation materialType: MaterialType) {
         self.dimensionFields = dimensionFields
         self.materialType = materialType
         super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         setupView()
     }
-    
-    func setupView(){
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setupView(){
         backgroundColor = .white
         addSubview(materialChoiceStackView)
         materialChoiceStackView.addArrangedSubview(materialTextField)
@@ -244,8 +248,18 @@ class UniversalView: UIView {
         }
         
     }
-    
-    // Action Functions
+
+    private func showError(for errorMessge: String) {
+        let ac = UIAlertController(title: "Error", message: errorMessge, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        okAction.setValue(UIColor.secondary, forKey: "titleTextColor")
+        ac.addAction(okAction)
+        UIApplication.shared.keyWindow?.rootViewController?.present(ac, animated: true, completion: nil)
+    }
+
+    //
+    // ACTION METHODS
+    //
     @objc private func closeKeyboard(_ recognizer: UITapGestureRecognizer) {
         dismissKeyboard()
     }
@@ -255,12 +269,9 @@ class UniversalView: UIView {
     }
     
     @objc private func calculateBtnPressed(_ sender: Any) {
-        clearFieldsBtn.alpha = 1
-        clearFieldsBtn.isEnabled = true
-        materialTypeImage.isHidden = true
-        weightLabel.isHidden = false
+
         if selectedMaterialFactor == nil {
-            errorLabel(for: weightLabel, hiddenLabel: poundsLabel, errorMessge: ErrorMessage.noMaterialSelectedErrorMessage)
+            showError(for: ErrorMessage.noMaterialSelectedErrorMessage)
         } else {
             do {
                 weightLabel.textColor = .secondary
@@ -287,16 +298,20 @@ class UniversalView: UIView {
                                                               wall: dimensionFields[1].text!,
                                                               length: dimensionFields[2].text!)
                 }
-                
+                clearFieldsBtn.alpha = 1
+                clearFieldsBtn.isEnabled = true
+                materialTypeImage.isHidden = true
+                weightLabel.isHidden = false
+
                 weightLabel.text = String(calculatedValue)
                 poundsLabel.isHidden = false
                 
             } catch CalculationError.invalidInput {
-                errorLabel(for: weightLabel, hiddenLabel: poundsLabel, errorMessge: ErrorMessage.invalidInputErrorMessage)
+                showError(for: ErrorMessage.invalidInputErrorMessage)
             } catch CalculationError.zeroValue {
-                errorLabel(for: weightLabel, hiddenLabel: poundsLabel, errorMessge: ErrorMessage.zeroValueErrorMessage)
+                showError(for: ErrorMessage.zeroValueErrorMessage)
             } catch {
-                errorLabel(for: weightLabel, hiddenLabel: poundsLabel, errorMessge: ErrorMessage.unexpectedErrorMessage)
+                showError(for: ErrorMessage.unexpectedErrorMessage)
             }
         }
         
@@ -312,9 +327,5 @@ class UniversalView: UIView {
         clearFieldsBtn.alpha = 0
         materialTypeImage.isHidden = false
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
 }

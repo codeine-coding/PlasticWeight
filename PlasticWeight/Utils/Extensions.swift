@@ -35,11 +35,11 @@ extension UIView {
     ///   - label: Label to be converter to an error label.
     ///   - hiddenLabel: Label that should be hidden when error message displays.
     ///   - errorMessge: Error message to display on label.
-    func errorLabel(for label: UILabel, hiddenLabel: UILabel, errorMessge: String) {
-        label.textColor = .error
-        label.text = errorMessge
-        hiddenLabel.isHidden = true
-    }
+//    func errorLabel(for label: UILabel, hiddenLabel: UILabel, errorMessge: String) {
+//        label.textColor = .error
+//        label.text = errorMessge
+//        hiddenLabel.isHidden = true
+//    }
     
     func edgeToEdgeConstraints(in view: UIView) {
         NSLayoutConstraint.activate([
