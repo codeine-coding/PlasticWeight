@@ -68,7 +68,7 @@ platform :ios do
       app_version: "1.0",
     )
     deliver(
-      build_number: "8"
+      build_number: "8",
       submit_for_review: true,
       automatic_release: true,
     )
