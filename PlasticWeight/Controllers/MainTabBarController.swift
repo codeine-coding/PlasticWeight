@@ -14,6 +14,8 @@ class MainTabBarController: UITabBarController {
     var roundTubeViewController: UINavigationController!
     var squareTubeViewController: UINavigationController!
 
+    let calculator: WeightCalculatorType = WeightCalculator()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -23,22 +25,22 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = .secondary
         tabBar.isTranslucent = false
         
-        sheetBarViewController = UINavigationController(rootViewController: MainViewController())
+        sheetBarViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
         sheetBarViewController.title = "Sheet / Bar"
         sheetBarViewController.tabBarItem.image = UIImage(named: "TabBar/sheet")
         sheetBarViewController.tabBarItem.tag = 0
         
-        rodViewController = UINavigationController(rootViewController: MainViewController())
+        rodViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
         rodViewController.title = "Rod"
         rodViewController.tabBarItem.image = UIImage(named: "TabBar/rod")
         rodViewController.tabBarItem.tag = 1
         
-        roundTubeViewController = UINavigationController(rootViewController: MainViewController())
+        roundTubeViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
         roundTubeViewController.title = "Round Tube"
         roundTubeViewController.tabBarItem.image = UIImage(named: "TabBar/roundTube")
         roundTubeViewController.tabBarItem.tag = 2
         
-        squareTubeViewController = UINavigationController(rootViewController: MainViewController())
+        squareTubeViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
         squareTubeViewController.title = "Square Tube"
         squareTubeViewController.tabBarItem.image = UIImage(named: "TabBar/squareTube")
         squareTubeViewController.tabBarItem.tag = 3
