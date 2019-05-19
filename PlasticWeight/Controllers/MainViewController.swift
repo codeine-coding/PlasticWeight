@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MainVCDelegate: class {
-    func calculateButtonPressed(view: UniversalView)
+    func calculateButtonPressed(on view: UniversalView)
 }
 
 class MainViewController: UIViewController {
@@ -82,7 +82,7 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: MainVCDelegate {
-    func calculateButtonPressed(view: UniversalView) {
+    func calculateButtonPressed(on view: UniversalView) {
         guard let selectedMaterialFactor = view.selectedMaterialFactor else {
             showError(for: ErrorMessage.noMaterialSelectedErrorMessage)
             return

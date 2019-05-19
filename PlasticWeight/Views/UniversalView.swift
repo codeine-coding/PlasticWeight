@@ -281,7 +281,7 @@ class UniversalView: UIView {
     }
     
     @objc private func calculateBtnPressed(_ sender: Any) {
-        delegate?.calculateButtonPressed(view: self)
+        delegate?.calculateButtonPressed(on: self)
     }
     
     @objc private func clearFieldsBtnPressed(_ sender: Any) {
