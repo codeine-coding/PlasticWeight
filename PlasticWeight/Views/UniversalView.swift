@@ -10,6 +10,7 @@ import UIKit
 
 class UniversalView: UIView {
     // private variables
+    weak var delegate: MainVCDelegate?
     var materialType: MaterialType
     var dimensionFields: [DimensionTextField]
     var dimensionLabels = [DimensionLabel]()
@@ -144,9 +145,10 @@ class UniversalView: UIView {
     //
     // METHODS
     //
-    init(dimensionFields: [DimensionTextField], calculation materialType: MaterialType) {
+    init(dimensionFields: [DimensionTextField], calculation materialType: MaterialType, delegate: MainVCDelegate) {
         self.dimensionFields = dimensionFields
         self.materialType = materialType
+        self.delegate = delegate
         super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         setupView()
     }
@@ -257,6 +259,16 @@ class UniversalView: UIView {
         UIApplication.shared.keyWindow?.rootViewController?.present(ac, animated: true, completion: nil)
     }
 
+    func showWeightLabel(weight: String) {
+        clearFieldsBtn.alpha = 1
+        clearFieldsBtn.isEnabled = true
+        materialTypeImage.isHidden = true
+        weightLabel.isHidden = false
+
+        weightLabel.text = weight
+        poundsLabel.isHidden = false
+    }
+
     //
     // ACTION METHODS
     //
@@ -269,52 +281,7 @@ class UniversalView: UIView {
     }
     
     @objc private func calculateBtnPressed(_ sender: Any) {
-
-        if selectedMaterialFactor == nil {
-            showError(for: ErrorMessage.noMaterialSelectedErrorMessage)
-        } else {
-            do {
-                weightLabel.textColor = .secondary
-                
-                var calculatedValue: Double
-                switch materialType {
-                case .sheetBar:
-                    calculatedValue = try calculateSheet(factor: selectedMaterialFactor!,
-                                                         thickness: dimensionFields[0].text!,
-                                                         width: dimensionFields[1].text!,
-                                                         length: dimensionFields[2].text!)
-                case .rod:
-                    calculatedValue = try calculateRoundRod(factor: selectedMaterialFactor!,
-                                                            diameter: dimensionFields[0].text!,
-                                                            length: dimensionFields[1].text!)
-                case .roundTube:
-                    calculatedValue = try calculateRoundTube(factor: selectedMaterialFactor!,
-                                                             outsideDiameter: dimensionFields[0].text!,
-                                                             wall: dimensionFields[1].text!,
-                                                             length: dimensionFields[2].text!)
-                case .squareTube:
-                    calculatedValue = try calculateSquareTube(factor: selectedMaterialFactor!,
-                                                              outsideSquareWidth: dimensionFields[0].text!,
-                                                              wall: dimensionFields[1].text!,
-                                                              length: dimensionFields[2].text!)
-                }
-                clearFieldsBtn.alpha = 1
-                clearFieldsBtn.isEnabled = true
-                materialTypeImage.isHidden = true
-                weightLabel.isHidden = false
-
-                weightLabel.text = String(calculatedValue)
-                poundsLabel.isHidden = false
-                
-            } catch CalculationError.invalidInput {
-                showError(for: ErrorMessage.invalidInputErrorMessage)
-            } catch CalculationError.zeroValue {
-                showError(for: ErrorMessage.zeroValueErrorMessage)
-            } catch {
-                showError(for: ErrorMessage.unexpectedErrorMessage)
-            }
-        }
-        
+        delegate?.calculateButtonPressed(view: self)
     }
     
     @objc private func clearFieldsBtnPressed(_ sender: Any) {
