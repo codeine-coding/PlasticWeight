@@ -12,16 +12,20 @@ import XCTest
 class UniversalViewTests: XCTestCase {
     var sut: UniversalView!
     var mainVC: MainViewController!
+    var calculator: WeightCalculatorType = WeightCalculator()
+    var gaugeTextField = DimensionTextField(titleForLabel: "(T)hickness")
+    var widthTextfield = DimensionTextField(titleForLabel: "(W)idth")
+    var lengthTextField = DimensionTextField(titleForLabel: "(L)ength")
 
     override func setUp() {
-        mainVC = MainViewController()
+        mainVC = MainViewController(calculator: calculator)
         mainVC.loadViewIfNeeded()
         let textFields: [DimensionTextField] = [
-            mainVC.gaugeTextField,
-            mainVC.widthTextfield,
-            mainVC.lengthTextField
+            gaugeTextField,
+            widthTextfield,
+            lengthTextField
         ]
-        sut = UniversalView(dimensionFields: textFields, calculation: .sheetBar)
+        sut = UniversalView(dimensionFields: textFields, calculation: .sheetBar, delegate: mainVC)
     }
 
     override func tearDown() {
