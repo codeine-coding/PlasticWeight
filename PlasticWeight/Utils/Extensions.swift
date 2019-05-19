@@ -50,3 +50,21 @@ extension UIView {
         ])
     }
 }
+
+extension UIViewController {
+    func showError(for errorMessge: String) {
+        let ac = UIAlertController(title: "Error", message: errorMessge, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        okAction.setValue(UIColor.secondary, forKey: "titleTextColor")
+        ac.addAction(okAction)
+        present(ac, animated: true, completion: nil)
+    }
+}
+
+extension Collection {
+
+    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
