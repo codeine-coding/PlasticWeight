@@ -108,22 +108,36 @@ extension MainViewController: MainVCDelegate {
                 guard
                     let diameter = view.dimensionFields[safe: 0]?.text,
                     let length = view.dimensionFields[safe: 1]?.text
-                    else {
-                        return
+                else {
+                    return
                 }
                 calculatedValue = try calculator.calculateRoundRod(factor: selectedMaterialFactor,
                                                                    diameter: diameter,
                                                                    length: length)
             case .roundTube:
+                guard
+                    let outsideDiameter = view.dimensionFields[safe: 0]?.text,
+                    let wall = view.dimensionFields[safe: 1]?.text,
+                    let length = view.dimensionFields[safe: 2]?.text
+                else {
+                    return
+                }
                 calculatedValue = try calculator.calculateRoundTube(factor: selectedMaterialFactor,
-                                                                    outsideDiameter: view.dimensionFields[0].text!,
-                                                                    wall: view.dimensionFields[1].text!,
-                                                                    length: view.dimensionFields[2].text!)
+                                                                    outsideDiameter: outsideDiameter,
+                                                                    wall: wall,
+                                                                    length: length)
             case .squareTube:
+                guard
+                    let outsideSquareWidth = view.dimensionFields[safe: 0]?.text,
+                    let wall = view.dimensionFields[safe: 1]?.text,
+                    let length = view.dimensionFields[safe: 2]?.text
+                else {
+                    return
+                }
                 calculatedValue = try calculator.calculateSquareTube(factor: selectedMaterialFactor,
-                                                                     outsideSquareWidth: view.dimensionFields[0].text!,
-                                                                     wall: view.dimensionFields[1].text!,
-                                                                     length: view.dimensionFields[2].text!)
+                                                                     outsideSquareWidth: outsideSquareWidth,
+                                                                     wall: wall,
+                                                                     length: length)
             }
 
             view.showWeightLabel(weight: String(calculatedValue))
