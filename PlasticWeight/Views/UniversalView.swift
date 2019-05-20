@@ -9,30 +9,27 @@
 import UIKit
 
 class UniversalView: UIView {
-    // private variables
+    //
+    // MARK: Properties
+    private var dimensionLabels = [DimensionLabel]()
+    private var textFieldStacks = [TextFieldStackView]()
+
+    private var plasticManager = PlasticManager()
+
+    var materialType: MaterialType
     var dimensionFields = Form()
     weak var delegate: MainVCDelegate?
-    var materialType: MaterialType
-    var dimensionLabels = [DimensionLabel]()
-    var textFieldStacks = [TextFieldStackView]()
-
-    var plasticManager = PlasticManager()
 
     var selectedMaterial: String?
     var selectedMaterialFactor: Double?
     var materialTypeImage: UIImageView!
     
     // NSConstraints
-    var sharedConstraints: [NSLayoutConstraint] = []
-    var SEConstraints: [NSLayoutConstraint] = []
-    var greaterThanSEConstraints: [NSLayoutConstraint] = []
+    private var sharedConstraints: [NSLayoutConstraint] = []
+    private var SEConstraints: [NSLayoutConstraint] = []
+    private var greaterThanSEConstraints: [NSLayoutConstraint] = []
 
-
-    //
-    // VIEW INIT CLOSURES
-    //
-
-    // material Choice Stack
+    // Material Choice Stack
     var materialTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -60,10 +57,10 @@ class UniversalView: UIView {
     }()
     
     // Picker
-    var materialPicker: UIPickerView = UIPickerView()
+    private var materialPicker: UIPickerView = UIPickerView()
     
     // Keyboard & Picker Toolbar
-    var textFieldEditingToolBar: UIToolbar = {
+    private var textFieldEditingToolBar: UIToolbar = {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         toolbar.tintColor = .primary
@@ -73,7 +70,7 @@ class UniversalView: UIView {
     }()
     
     // Dimensions Stack
-    var dimensionsStackView: UIStackView = {
+    private var dimensionsStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .horizontal
@@ -104,7 +101,7 @@ class UniversalView: UIView {
         return label
     }()
     
-    var weightPoundStackView: UIStackView = {
+    private var weightPoundStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .vertical
@@ -115,7 +112,7 @@ class UniversalView: UIView {
     }()
     
     // Calc & Clear Button Stack
-    var calculateBtn:  RadiusButton = {
+    private var calculateBtn:  RadiusButton = {
         let btn = RadiusButton()
         btn.setTitle("Calculate", for: .normal)
         btn.setTitleColor(.white, for: .normal)
@@ -123,7 +120,7 @@ class UniversalView: UIView {
         return btn
     }()
     
-    var clearFieldsBtn: RadiusButton = {
+    private var clearFieldsBtn: RadiusButton = {
         let btn = RadiusButton()
         btn.setTitle("Clear Fields", for: .normal)
         btn.setTitleColor(.primary, for: .normal)
@@ -133,7 +130,7 @@ class UniversalView: UIView {
         return btn
     }()
     
-    var buttonStackView: UIStackView = {
+    private var buttonStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .vertical
@@ -143,7 +140,7 @@ class UniversalView: UIView {
     }()
     
     //
-    // METHODS
+    // MARK: - Methods
     //
     init(dimensionFields: [DimensionTextField], calculation materialType: MaterialType, delegate: MainVCDelegate) {
         self.dimensionFields.controls = dimensionFields
@@ -277,9 +274,7 @@ class UniversalView: UIView {
         poundsLabel.isHidden = false
     }
 
-    //
-    // ACTION METHODS
-    //
+    // Action Methods
     @objc private func closeKeyboard(_ recognizer: UITapGestureRecognizer) {
         dismissKeyboard()
     }
@@ -303,4 +298,99 @@ class UniversalView: UIView {
         materialTypeImage.isHidden = false
     }
 
+}
+
+//
+// MARK: - Constraints
+extension UniversalView {
+
+    private func displayConstraints() {
+        let safeArea = safeAreaLayoutGuide
+        let imageWidth = UIScreen.main.bounds.width - 32
+        let screenWdith = imageWidth + 32
+
+        sharedConstraints.append(contentsOf: [
+            materialChoiceStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 16),
+            materialChoiceStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+            materialChoiceStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
+
+            dimensionsStackView.topAnchor.constraint(equalTo: materialChoiceStackView.bottomAnchor, constant: 16),
+            dimensionsStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+            dimensionsStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
+
+            materialTypeImage.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+
+            weightPoundStackView.centerXAnchor.constraint(equalTo: materialTypeImage.centerXAnchor),
+            weightPoundStackView.widthAnchor.constraint(equalToConstant: imageWidth),
+            ])
+
+        greaterThanSEConstraints.append(contentsOf: [
+            materialTypeImage.topAnchor.constraint(equalTo: dimensionsStackView.topAnchor, constant: 32),
+            materialTypeImage.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.80),
+
+            weightPoundStackView.centerYAnchor.constraint(equalTo: materialTypeImage.centerYAnchor),
+
+            buttonStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+            buttonStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
+            buttonStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -16),
+            buttonStackView.heightAnchor.constraint(equalToConstant: 120),
+            ])
+
+        SEConstraints.append(contentsOf: [
+            materialTypeImage.topAnchor.constraint(equalTo: dimensionsStackView.topAnchor, constant: 8),
+            materialTypeImage.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.60),
+
+            weightPoundStackView.centerYAnchor.constraint(equalTo: materialTypeImage.centerYAnchor, constant: -24),
+
+            buttonStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+            buttonStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
+            buttonStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -16),
+            buttonStackView.heightAnchor.constraint(equalToConstant: 96),
+            ])
+
+        NSLayoutConstraint.activate(sharedConstraints)
+
+        if screenWdith <= 320 {
+            NSLayoutConstraint.activate(SEConstraints)
+        } else {
+            NSLayoutConstraint.activate(greaterThanSEConstraints)
+        }
+    }
+}
+
+
+//
+// MARK: - PickerView Delegate & DataSource
+extension UniversalView: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return plasticManager.materials.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let material = plasticManager.materials[row]
+        selectedMaterial = material.title
+        selectedMaterialFactor = material.factor
+        materialTextField.text = selectedMaterial
+    }
+
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label: UILabel
+
+        if let view = view as? UILabel {
+            label = view
+        } else {
+            label = UILabel()
+        }
+
+        label.textAlignment = .center
+        label.text = plasticManager.materials[row].title
+        label.textColor = .primary
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+
+        return label
+    }
 }
