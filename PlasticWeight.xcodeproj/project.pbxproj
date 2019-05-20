@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2D87A22293159A00205B6E /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D87A12293159A00205B6E /* InputField.swift */; };
+		9F2D87A422931D9900205B6E /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D87A322931D9900205B6E /* Form.swift */; };
 		9FB8B1FC2287E3FD00AD393E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */; };
 		9FB8B1FE228CC74700AD393E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8B1FD228CC74700AD393E /* MainViewController.swift */; };
 		9FBF2B96218E09BB009212BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2B95218E09BB009212BE /* AppDelegate.swift */; };
@@ -25,7 +27,6 @@
 		9FBF2BE0218E9950009212BE /* CalculationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BDF218E9950009212BE /* CalculationErrorTests.swift */; };
 		9FBF2BE3218EABE9009212BE /* MainTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BE2218EABE9009212BE /* MainTabBarControllerTests.swift */; };
 		9FBF2BE5218EACC6009212BE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BE4218EACC6009212BE /* MainTabBarController.swift */; };
-		9FBF2BF0218EDEB6009212BE /* FormControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BEE218EDEB5009212BE /* FormControl.swift */; };
 		9FBF2BF5218EDF2B009212BE /* UniversalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BF4218EDF2B009212BE /* UniversalView.swift */; };
 		9FBF2BF7218EDFD6009212BE /* MaterialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BF6218EDFD6009212BE /* MaterialType.swift */; };
 		9FBF2BF9218EE3BD009212BE /* DimensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2BF8218EE3BD009212BE /* DimensionTextField.swift */; };
@@ -57,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F2D87A12293159A00205B6E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		9F2D87A322931D9900205B6E /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		9FB8B1FD228CC74700AD393E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9FBF2B92218E09BB009212BE /* PlasticWeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlasticWeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +84,6 @@
 		9FBF2BDF218E9950009212BE /* CalculationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationErrorTests.swift; sourceTree = "<group>"; };
 		9FBF2BE2218EABE9009212BE /* MainTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerTests.swift; sourceTree = "<group>"; };
 		9FBF2BE4218EACC6009212BE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		9FBF2BEE218EDEB5009212BE /* FormControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormControl.swift; sourceTree = "<group>"; };
 		9FBF2BF4218EDF2B009212BE /* UniversalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalView.swift; sourceTree = "<group>"; };
 		9FBF2BF6218EDFD6009212BE /* MaterialType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialType.swift; sourceTree = "<group>"; };
 		9FBF2BF8218EE3BD009212BE /* DimensionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionTextField.swift; sourceTree = "<group>"; };
@@ -183,6 +185,8 @@
 				9FBF2BCF218E5B96009212BE /* Plastic.swift */,
 				9FBF2BD5218E8CFB009212BE /* PlasticManager.swift */,
 				9FBF2BF6218EDFD6009212BE /* MaterialType.swift */,
+				9F2D87A12293159A00205B6E /* InputField.swift */,
+				9F2D87A322931D9900205B6E /* Form.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -224,7 +228,6 @@
 		9FBF2BCA218E4AB9009212BE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9FBF2BEE218EDEB5009212BE /* FormControl.swift */,
 				9FBF2BD9218E9851009212BE /* CalculationFunctions.swift */,
 				9FBF2BDB218E9892009212BE /* CalculationError.swift */,
 				9FBF2C1221903F6D009212BE /* ErrorMessages.swift */,
@@ -405,8 +408,8 @@
 				9FBF2BDE218E98F4009212BE /* Extensions.swift in Sources */,
 				9FBF2BDA218E9851009212BE /* CalculationFunctions.swift in Sources */,
 				9FBF2C1321903F6D009212BE /* ErrorMessages.swift in Sources */,
+				9F2D87A22293159A00205B6E /* InputField.swift in Sources */,
 				9FBF2BE5218EACC6009212BE /* MainTabBarController.swift in Sources */,
-				9FBF2BF0218EDEB6009212BE /* FormControl.swift in Sources */,
 				9FBF2BF5218EDF2B009212BE /* UniversalView.swift in Sources */,
 				9FBF2BDC218E9892009212BE /* CalculationError.swift in Sources */,
 				9FBF2C0B21900FA6009212BE /* RadiusButton.swift in Sources */,
@@ -414,6 +417,7 @@
 				9FBF2BF9218EE3BD009212BE /* DimensionTextField.swift in Sources */,
 				9FBF2BD6218E8CFB009212BE /* PlasticManager.swift in Sources */,
 				9FBF2B96218E09BB009212BE /* AppDelegate.swift in Sources */,
+				9F2D87A422931D9900205B6E /* Form.swift in Sources */,
 				9FBF2C09219008BF009212BE /* DimensionLabel.swift in Sources */,
 				9FBF2BF7218EDFD6009212BE /* MaterialType.swift in Sources */,
 			);

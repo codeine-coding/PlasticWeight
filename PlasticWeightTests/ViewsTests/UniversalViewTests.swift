@@ -13,9 +13,9 @@ class UniversalViewTests: XCTestCase {
     var sut: UniversalView!
     var mainVC: MainViewController!
     var calculator: WeightCalculatorType = WeightCalculator()
-    var gaugeTextField = DimensionTextField(titleForLabel: "(T)hickness")
-    var widthTextfield = DimensionTextField(titleForLabel: "(W)idth")
-    var lengthTextField = DimensionTextField(titleForLabel: "(L)ength")
+    var gaugeTextField = DimensionTextField(for: .thickness)
+    var widthTextfield = DimensionTextField(for: .width)
+    var lengthTextField = DimensionTextField(for: .length)
 
     override func setUp() {
         mainVC = MainViewController(calculator: calculator)

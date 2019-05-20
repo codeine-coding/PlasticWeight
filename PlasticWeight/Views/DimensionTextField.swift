@@ -9,10 +9,10 @@
 import UIKit
 
 class DimensionTextField: UITextField {
-    var titleForLabel: String?
+    var inputType: InputField?
 
-    init(titleForLabel: String?) {
-        self.titleForLabel = titleForLabel
+    init(for inputType: InputField?) {
+        self.inputType = inputType
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         setupView()
     }

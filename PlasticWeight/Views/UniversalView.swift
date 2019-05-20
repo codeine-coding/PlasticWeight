@@ -10,9 +10,9 @@ import UIKit
 
 class UniversalView: UIView {
     // private variables
+    var dimensionFields = Form()
     weak var delegate: MainVCDelegate?
     var materialType: MaterialType
-    var dimensionFields: [DimensionTextField]
     var dimensionLabels = [DimensionLabel]()
     var textFieldStacks = [TextFieldStackView]()
 
@@ -146,7 +146,7 @@ class UniversalView: UIView {
     // METHODS
     //
     init(dimensionFields: [DimensionTextField], calculation materialType: MaterialType, delegate: MainVCDelegate) {
-        self.dimensionFields = dimensionFields
+        self.dimensionFields.controls = dimensionFields
         self.materialType = materialType
         self.delegate = delegate
         super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -191,17 +191,24 @@ class UniversalView: UIView {
     }
     
     private func setupDimensionsInputStack() {
-        textFieldStacks = [TextFieldStackView](repeating: TextFieldStackView() , count: dimensionFields.count)
-        dimensionLabels = Array(repeating: DimensionLabel(), count: dimensionFields.count)
+        guard let dimensionsFieldsCount = dimensionFields.controls?.count else { return }
+
+        textFieldStacks = [TextFieldStackView](repeating: TextFieldStackView() , count: dimensionsFieldsCount)
+        dimensionLabels = Array(repeating: DimensionLabel(), count: dimensionsFieldsCount)
         
-        for index in 0..<dimensionFields.count {
+        for index in 0..<dimensionsFieldsCount {
             dimensionLabels[index] = DimensionLabel()
             textFieldStacks[index] = TextFieldStackView()
-            
-            let dimensionTextField = dimensionFields[index]
+
+            guard
+                let field = dimensionFields.controls?[index] as? DimensionTextField,
+                let labelTitle = dimensionFields.controls?[index].inputType?.title
+            else { return }
+
+            let dimensionTextField = field
             
             let label = dimensionLabels[index]
-            label.text = dimensionTextField.titleForLabel
+            label.text = labelTitle
             
             let textFieldStack = textFieldStacks[index]
             
@@ -226,6 +233,7 @@ class UniversalView: UIView {
         textFieldEditingToolBar.setItems([doneBtn], animated: false)
         
         materialTextField.inputAccessoryView = textFieldEditingToolBar
+        guard let dimensionFields = dimensionFields.controls as? [DimensionTextField] else { return }
         dimensionFields.forEach { $0.inputAccessoryView = textFieldEditingToolBar }
         
         // set up gesture recognizer on view background tap to close keyboard
@@ -288,7 +296,7 @@ class UniversalView: UIView {
         selectedMaterial  = nil
         selectedMaterialFactor = nil
         materialTextField.text = nil
-        dimensionFields.forEach { $0.clear() }
+        dimensionFields.clear()
         weightLabel.isHidden = true
         poundsLabel.isHidden = true
         clearFieldsBtn.alpha = 0

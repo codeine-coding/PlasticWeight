@@ -14,20 +14,20 @@ protocol MainVCDelegate: class {
 
 class MainViewController: UIViewController {
     // sheet bar
-    private var gaugeTextField = DimensionTextField(titleForLabel: "(T)hickness")
-    private var widthTextfield = DimensionTextField(titleForLabel: "(W)idth")
-    private var lengthTextField = DimensionTextField(titleForLabel: "(L)ength")
+    private var gaugeTextField = DimensionTextField(for: .thickness)
+    private var widthTextfield = DimensionTextField(for: .width)
+    private var lengthTextField = DimensionTextField(for: .length)
     private var dimensionFields: [DimensionTextField]!
 
     // rod
-    private var diameterTextField = DimensionTextField(titleForLabel: "(D)iameter")
+    private var diameterTextField = DimensionTextField(for: .diameter)
 
     // round tube
-    private var outerDiameterTextField = DimensionTextField(titleForLabel: "(O)uter (D)iameter")
-    private var wallTextField = DimensionTextField(titleForLabel: "(W)all")
+    private var outerDiameterTextField = DimensionTextField(for: .outerDiameter)
+    private var wallTextField = DimensionTextField(for: .wall)
 
     // square tube
-    private var outerSquareWidthTextField = DimensionTextField(titleForLabel: "(O)uter (S)q. Width")
+    private var outerSquareWidthTextField = DimensionTextField(for: .outerSquareWidth)
 
     // Views
     private var sheetBarView: UniversalView!
@@ -93,51 +93,24 @@ extension MainViewController: MainVCDelegate {
             var calculatedValue: Double
             switch view.materialType {
             case .sheetBar:
-                guard
-                    let thickness = view.dimensionFields[safe: 0]?.text,
-                    let width = view.dimensionFields[safe: 1]?.text,
-                    let length = view.dimensionFields[safe: 2]?.text
-                else {
-                    return
-                }
                 calculatedValue = try calculator.calculateSheet(factor: selectedMaterialFactor,
-                                                                thickness: thickness,
-                                                                width: width,
-                                                                length: length)
+                                                                thickness: view.dimensionFields[.thickness],
+                                                                width: view.dimensionFields[.width],
+                                                                length: view.dimensionFields[.length])
             case .rod:
-                guard
-                    let diameter = view.dimensionFields[safe: 0]?.text,
-                    let length = view.dimensionFields[safe: 1]?.text
-                else {
-                    return
-                }
                 calculatedValue = try calculator.calculateRoundRod(factor: selectedMaterialFactor,
-                                                                   diameter: diameter,
-                                                                   length: length)
+                                                                   diameter: view.dimensionFields[.diameter],
+                                                                   length: view.dimensionFields[.length])
             case .roundTube:
-                guard
-                    let outsideDiameter = view.dimensionFields[safe: 0]?.text,
-                    let wall = view.dimensionFields[safe: 1]?.text,
-                    let length = view.dimensionFields[safe: 2]?.text
-                else {
-                    return
-                }
                 calculatedValue = try calculator.calculateRoundTube(factor: selectedMaterialFactor,
-                                                                    outsideDiameter: outsideDiameter,
-                                                                    wall: wall,
-                                                                    length: length)
+                                                                    outsideDiameter: view.dimensionFields[.outerDiameter],
+                                                                    wall: view.dimensionFields[.wall],
+                                                                    length: view.dimensionFields[.length])
             case .squareTube:
-                guard
-                    let outsideSquareWidth = view.dimensionFields[safe: 0]?.text,
-                    let wall = view.dimensionFields[safe: 1]?.text,
-                    let length = view.dimensionFields[safe: 2]?.text
-                else {
-                    return
-                }
                 calculatedValue = try calculator.calculateSquareTube(factor: selectedMaterialFactor,
-                                                                     outsideSquareWidth: outsideSquareWidth,
-                                                                     wall: wall,
-                                                                     length: length)
+                                                                     outsideSquareWidth: view.dimensionFields[.outerSquareWidth],
+                                                                     wall: view.dimensionFields[.wall],
+                                                                     length: view.dimensionFields[.length])
             }
 
             view.showWeightLabel(weight: String(calculatedValue))
