@@ -57,7 +57,7 @@ class UniversalView: UIView {
     }()
     
     // Picker
-    private var materialPicker: UIPickerView = UIPickerView()
+    var materialPicker: UIPickerView = UIPickerView()
     
     // Keyboard & Picker Toolbar
     private var textFieldEditingToolBar: UIToolbar = {
@@ -70,7 +70,7 @@ class UniversalView: UIView {
     }()
     
     // Dimensions Stack
-    private var dimensionsStackView: UIStackView = {
+    var dimensionsStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .horizontal
@@ -101,7 +101,7 @@ class UniversalView: UIView {
         return label
     }()
     
-    private var weightPoundStackView: UIStackView = {
+    var weightPoundStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .vertical
@@ -112,7 +112,7 @@ class UniversalView: UIView {
     }()
     
     // Calc & Clear Button Stack
-    private var calculateBtn:  RadiusButton = {
+    var calculateBtn:  RadiusButton = {
         let btn = RadiusButton()
         btn.setTitle("Calculate", for: .normal)
         btn.setTitleColor(.white, for: .normal)
@@ -120,7 +120,7 @@ class UniversalView: UIView {
         return btn
     }()
     
-    private var clearFieldsBtn: RadiusButton = {
+    var clearFieldsBtn: RadiusButton = {
         let btn = RadiusButton()
         btn.setTitle("Clear Fields", for: .normal)
         btn.setTitleColor(.primary, for: .normal)
@@ -130,7 +130,7 @@ class UniversalView: UIView {
         return btn
     }()
     
-    private var buttonStackView: UIStackView = {
+    var buttonStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .vertical
