@@ -49,29 +49,6 @@ class PlasticWeightUITests: XCTestCase {
         XCTAssertFalse(app.navigationBars[title].exists)
     }
 
-    func testAlertView_WhenSelectedMaterial_IsEmpty() {
-
-        app.launch()
-        let sheetView = app.otherElements["SheetView"]
-        XCTAssertTrue(sheetView.exists)
-//        let textField = sheetView.descendants(matching: .textField)
-        let materialSelect = app.textFields["Select Material"]
-        XCTAssertTrue(materialSelect.exists)
-        materialSelect.tap()
-        let picker = sheetView.descendants(matching: .picker).element
-        XCTAssertTrue(picker.exists)
-
-//        picker.children(matching: .pickerWheel).element.swipeUp()
-//        app.pickers.children(matching: .pickerWheel).element.swipeUp()
-
-//        let app = XCUIApplication()
-//        app.textFields["Select Material"].tap()
-//        app.pickers.children(matching: .pickerWheel).element.swipeUp()
-//        app.toolbars["Toolbar"].buttons["Done"].tap()
-
-
-    }
-
     func testGetSnapshots() {
         setupSnapshot(app)
         app.launch()
