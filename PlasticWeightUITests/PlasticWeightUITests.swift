@@ -46,7 +46,7 @@ class PlasticWeightUITests: XCTestCase {
         app.launch()
         let title = "Square Tube"
         app.tabBars.buttons[title].tap()
-        XCTAssertFalse(app.navigationBars[title].exists)
+        XCTAssertTrue(app.navigationBars[title].exists)
     }
 
     func testGetSnapshots() {

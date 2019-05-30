@@ -40,6 +40,7 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
+  	test
     increment_build_number 
     gym
     upload_to_testflight(
@@ -51,11 +52,10 @@ platform :ios do
     )
   end
 
-  lane :test do
-    run_tests(scheme: "PlasticWeightTests")
-  end
+  
 
   lane :release do
+  	test
     produce(
       username: $username,
       app_identifier: $app_identifier,
@@ -77,6 +77,11 @@ platform :ios do
       app_identifier: $app_identifier,
       clear_previous_screenshots: true
     )
+  end
+
+  desc "Run Unit & UITests"
+  private_lane :test do
+    run_tests(scheme: "PlasticWeightTests")
   end
 
   after_all do
