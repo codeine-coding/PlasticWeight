@@ -9,8 +9,8 @@
 import UIKit
 
 class UniversalView: UIView {
-    //
-    // MARK: Properties
+    
+    // MARK: - Properties
     private var dimensionLabels = [DimensionLabel]()
     private var textFieldStacks = [TextFieldStackView]()
 
@@ -138,10 +138,8 @@ class UniversalView: UIView {
         sv.spacing = 8
         return sv
     }()
-    
-    //
+
     // MARK: - Methods
-    //
     init(dimensionFields: [DimensionTextField], calculation materialType: MaterialType, delegate: MainVCDelegate) {
         self.dimensionFields.controls = dimensionFields
         self.materialType = materialType
@@ -274,7 +272,7 @@ class UniversalView: UIView {
         poundsLabel.isHidden = false
     }
 
-    // Action Methods
+    // MARK: Action Methods
     @objc private func closeKeyboard(_ recognizer: UITapGestureRecognizer) {
         dismissKeyboard()
     }
@@ -300,7 +298,7 @@ class UniversalView: UIView {
 
 }
 
-//
+
 // MARK: - Constraints
 extension UniversalView {
 
@@ -359,7 +357,6 @@ extension UniversalView {
 }
 
 
-//
 // MARK: - PickerView Delegate & DataSource
 extension UniversalView: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
