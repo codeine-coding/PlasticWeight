@@ -332,13 +332,16 @@
 				TargetAttributes = {
 					9FBF2B91218E09BB009212BE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					9FBF2BA5218E09BD009212BE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 9FBF2B91218E09BB009212BE;
 					};
 					9FBF2BB0218E09BD009212BE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 9FBF2B91218E09BB009212BE;
 					};
 				};
@@ -600,7 +603,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeinetech.PlasticWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "com.codeinetech.PlasticWeight AppStore";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -623,7 +626,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeinetech.PlasticWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "com.codeinetech.PlasticWeight AppStore";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -644,7 +647,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeinetech.PlasticWeightTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlasticWeight.app/PlasticWeight";
 			};
@@ -665,7 +668,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeinetech.PlasticWeightTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlasticWeight.app/PlasticWeight";
 			};
@@ -685,7 +688,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeinetech.PlasticWeightUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PlasticWeight;
 			};
@@ -705,7 +708,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeinetech.PlasticWeightUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PlasticWeight;
 			};
