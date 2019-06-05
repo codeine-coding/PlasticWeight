@@ -14,7 +14,7 @@ class MainTabBarController: UITabBarController {
     var roundTubeViewController: UINavigationController!
     var squareTubeViewController: UINavigationController!
 
-    let calculator: WeightCalculatorType = WeightCalculator()
+    let calculator: WeightCalculatorType = ImperialWeightCalculator()
 
     override func viewDidLoad() {
         super.viewDidLoad()

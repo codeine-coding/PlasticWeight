@@ -15,7 +15,7 @@ protocol WeightCalculatorType {
     func calculateSquareTube(factor: Double, outsideSquareWidth: String, wall: String, length: String) throws -> Double
 }
 
-struct WeightCalculator: WeightCalculatorType {
+struct ImperialWeightCalculator: WeightCalculatorType {
 
     /// Function to return the calculated weight of sheet/bar material.
     ///
