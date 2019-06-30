@@ -11,7 +11,7 @@ import UIKit
 class UniversalView: UIView {
     
     // MARK: - Properties
-    private var dimensionLabels = [DimensionLabel]()
+    private var dimensionLabels: [DimensionLabel]!
     private var textFieldStacks = [TextFieldStackView]()
 
     private var plasticManager = PlasticManager()
