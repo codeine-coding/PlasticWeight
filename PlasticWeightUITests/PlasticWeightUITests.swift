@@ -15,6 +15,7 @@ class PlasticWeightUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
+        app.launch()
     }
 
     override func tearDown() {
@@ -22,36 +23,28 @@ class PlasticWeightUITests: XCTestCase {
         app = nil
     }
 
-    func testSheetBarVC_Exists_AndIsFirstViewLoaded() {
-        app.launch()
-        XCTAssertTrue(app.navigationBars["Sheet / Bar"].exists, "Sheet Bar View Should be first view controller")
-
+    func testSheetBarVCTabBarButton_Exists() {
+        let title = "Sheet / Bar"
+        XCTAssertTrue(app.tabBars.buttons[title].exists)
     }
 
-    func testRodVC_Exists() {
-        app.launch()
+    func testRodVCTabBarButton_Exists() {
         let title = "Rod"
-        app.tabBars.buttons[title].tap()
-        XCTAssertFalse(app.navigationBars[title].exists)
+        XCTAssertTrue(app.tabBars.buttons[title].exists)
     }
 
-    func testRoundTubeVC_Exists() {
-        app.launch()
+    func testRoundTubeVCTabBarButton_Existss() {
         let title = "Round Tube"
-        app.tabBars.buttons[title].tap()
-        XCTAssertFalse(app.navigationBars[title].exists)
+        XCTAssertTrue(app.tabBars.buttons[title].exists)
     }
 
-    func testSquareTubeVC_Exists() {
-        app.launch()
+    func testSquareTubeVTabBarButton_Exists() {
         let title = "Square Tube"
-        app.tabBars.buttons[title].tap()
-        XCTAssertFalse(app.navigationBars[title].exists)
+        XCTAssertTrue(app.tabBars.buttons[title].exists)
     }
 
     func testGetSnapshots() {
         setupSnapshot(app)
-        app.launch()
         let tabBarsQuery = app.tabBars
         tabBarsQuery.buttons["Sheet / Bar"].tap()
         snapshot("01SheetBarView")
