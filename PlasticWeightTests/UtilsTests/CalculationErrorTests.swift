@@ -12,7 +12,7 @@ import XCTest
 class CalculationErrorTests: XCTestCase {
     var acrylic: Plastic!
     var factor: Double!
-    var calculator: WeightCalculatorType = WeightCalculator()
+    var calculator: WeightCalculatorType = ImperialWeightCalculator()
     
     
     override func setUp() {

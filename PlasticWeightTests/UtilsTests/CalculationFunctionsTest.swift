@@ -12,7 +12,7 @@ import XCTest
 class CalculationFunctionsTest: XCTestCase {
     var acrylic: Plastic!
     var factor: Double!
-    var calculator: WeightCalculatorType = WeightCalculator()
+    var calculator: WeightCalculatorType = ImperialWeightCalculator()
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
