@@ -8,23 +8,32 @@
 
 import UIKit
 
-class RodViewController: UIViewController {
+class RodViewController: UIViewController, UniversalViewDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    private var diameterTextField = DimensionTextField(for: .diameter)
+    private var lengthTextField = DimensionTextField(for: .length)
+    private var dimensionFields: [DimensionTextField]!
+    
+    var calculator: WeightCalculatorType
+    
+    init(calculator: WeightCalculatorType) {
+        self.calculator = calculator
+        super.init(nibName: nil, bundle: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
+    
+    override func loadView() {
+        navigationController?.navigationBar.barStyle = .blackTranslucent
+        setupView()
+    }
+    
+    private func setupView() {
+        navigationItem.title = "Rod"
+        dimensionFields = [diameterTextField, lengthTextField]
+        view = UniversalView(dimensionFields: dimensionFields, calculation: .rod, delegate: self)
+    }
 
 }

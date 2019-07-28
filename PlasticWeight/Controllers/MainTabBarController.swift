@@ -25,22 +25,42 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = .secondary
         tabBar.isTranslucent = false
         
-        sheetBarViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
+//        sheetBarViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
+//        sheetBarViewController.title = "Sheet / Bar"
+//        sheetBarViewController.tabBarItem.image = UIImage(named: "TabBar/sheet")
+//        sheetBarViewController.tabBarItem.tag = 0
+//
+//        rodViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
+//        rodViewController.title = "Rod"
+//        rodViewController.tabBarItem.image = UIImage(named: "TabBar/rod")
+//        rodViewController.tabBarItem.tag = 1
+//
+//        roundTubeViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
+//        roundTubeViewController.title = "Round Tube"
+//        roundTubeViewController.tabBarItem.image = UIImage(named: "TabBar/roundTube")
+//        roundTubeViewController.tabBarItem.tag = 2
+//
+//        squareTubeViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
+//        squareTubeViewController.title = "Square Tube"
+//        squareTubeViewController.tabBarItem.image = UIImage(named: "TabBar/squareTube")
+//        squareTubeViewController.tabBarItem.tag = 3
+        
+        sheetBarViewController = UINavigationController(rootViewController: SheetBarViewController(calculator: calculator))
         sheetBarViewController.title = "Sheet / Bar"
         sheetBarViewController.tabBarItem.image = UIImage(named: "TabBar/sheet")
         sheetBarViewController.tabBarItem.tag = 0
         
-        rodViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
+        rodViewController = UINavigationController(rootViewController: RodViewController(calculator: calculator))
         rodViewController.title = "Rod"
         rodViewController.tabBarItem.image = UIImage(named: "TabBar/rod")
         rodViewController.tabBarItem.tag = 1
         
-        roundTubeViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
+        roundTubeViewController = UINavigationController(rootViewController: RoundTubeViewController(calculator: calculator))
         roundTubeViewController.title = "Round Tube"
         roundTubeViewController.tabBarItem.image = UIImage(named: "TabBar/roundTube")
         roundTubeViewController.tabBarItem.tag = 2
         
-        squareTubeViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
+        squareTubeViewController = UINavigationController(rootViewController: SquareTubeViewController(calculator: calculator))
         squareTubeViewController.title = "Square Tube"
         squareTubeViewController.tabBarItem.image = UIImage(named: "TabBar/squareTube")
         squareTubeViewController.tabBarItem.tag = 3

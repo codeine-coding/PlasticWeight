@@ -8,23 +8,33 @@
 
 import UIKit
 
-class RoundTubeViewController: UIViewController {
+class RoundTubeViewController: UIViewController, UniversalViewDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    private var outerDiameterTextField = DimensionTextField(for: .outerDiameter)
+    private var wallTextField = DimensionTextField(for: .wall)
+    private var lengthTextField = DimensionTextField(for: .length)
+    private var dimensionFields: [DimensionTextField]!
+    
+    var calculator: WeightCalculatorType
+    
+    init(calculator: WeightCalculatorType) {
+        self.calculator = calculator
+        super.init(nibName: nil, bundle: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
+    
+    override func loadView() {
+        navigationController?.navigationBar.barStyle = .blackTranslucent
+        setupView()
+    }
+    
+    private func setupView() {
+        navigationItem.title = "Round Tube"
+        dimensionFields = [outerDiameterTextField, wallTextField, lengthTextField]
+        view = UniversalView(dimensionFields: dimensionFields, calculation: .roundTube, delegate: self)
+    }
 
 }
