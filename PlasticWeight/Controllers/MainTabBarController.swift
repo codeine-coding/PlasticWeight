@@ -46,22 +46,22 @@ class MainTabBarController: UITabBarController {
 //        squareTubeViewController.tabBarItem.tag = 3
         
         sheetBarViewController = UINavigationController(rootViewController: SheetBarViewController(calculator: calculator))
-        sheetBarViewController.title = "Sheet / Bar"
+        sheetBarViewController.title = TitleStrings.sheetbar
         sheetBarViewController.tabBarItem.image = UIImage(named: "TabBar/sheet")
         sheetBarViewController.tabBarItem.tag = 0
         
         rodViewController = UINavigationController(rootViewController: RodViewController(calculator: calculator))
-        rodViewController.title = "Rod"
+        rodViewController.title = TitleStrings.rod
         rodViewController.tabBarItem.image = UIImage(named: "TabBar/rod")
         rodViewController.tabBarItem.tag = 1
         
         roundTubeViewController = UINavigationController(rootViewController: RoundTubeViewController(calculator: calculator))
-        roundTubeViewController.title = "Round Tube"
+        roundTubeViewController.title = TitleStrings.roundTube
         roundTubeViewController.tabBarItem.image = UIImage(named: "TabBar/roundTube")
         roundTubeViewController.tabBarItem.tag = 2
         
         squareTubeViewController = UINavigationController(rootViewController: SquareTubeViewController(calculator: calculator))
-        squareTubeViewController.title = "Square Tube"
+        squareTubeViewController.title = TitleStrings.squareTube
         squareTubeViewController.tabBarItem.image = UIImage(named: "TabBar/squareTube")
         squareTubeViewController.tabBarItem.tag = 3
         
