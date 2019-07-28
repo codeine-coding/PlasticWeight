@@ -31,7 +31,7 @@ class RodViewController: UIViewController, UniversalViewDelegate, ErrorDisplayer
     }
     
     private func setupView() {
-        navigationItem.title = "Rod"
+        navigationItem.title = TitleStrings.rod
         dimensionFields = [diameterTextField, lengthTextField]
         view = UniversalView(dimensionFields: dimensionFields, calculation: .rod, delegate: self)
     }

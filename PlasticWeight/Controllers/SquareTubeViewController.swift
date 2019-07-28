@@ -31,7 +31,7 @@ class SquareTubeViewController: UIViewController, UniversalViewDelegate, ErrorDi
     }
     
     private func setupView() {
-        navigationItem.title = "Square Tube"
+        navigationItem.title = TitleStrings.squareTube
         dimensionFields = [outerSquareWidthTextField, wallTextField, lengthTextField]
         view = UniversalView(dimensionFields: dimensionFields, calculation: .squareTube, delegate: self)
     }

@@ -32,7 +32,7 @@ class SheetBarViewController: UIViewController, UniversalViewDelegate, ErrorDisp
     }
     
     private func setupView() {
-        navigationItem.title = "Sheet / Bar"
+        navigationItem.title = TitleStrings.sheetbar
         dimensionFields =  [gaugeTextField, widthTextfield, lengthTextField]
         view = UniversalView(dimensionFields: dimensionFields, calculation: .sheetBar, delegate: self)
     }

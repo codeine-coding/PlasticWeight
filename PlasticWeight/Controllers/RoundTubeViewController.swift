@@ -32,7 +32,7 @@ class RoundTubeViewController: UIViewController, UniversalViewDelegate, ErrorDis
     }
     
     private func setupView() {
-        navigationItem.title = "Round Tube"
+        navigationItem.title = TitleStrings.roundTube
         dimensionFields = [outerDiameterTextField, wallTextField, lengthTextField]
         view = UniversalView(dimensionFields: dimensionFields, calculation: .roundTube, delegate: self)
     }
