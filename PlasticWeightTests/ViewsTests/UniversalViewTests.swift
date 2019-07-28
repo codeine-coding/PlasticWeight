@@ -11,14 +11,14 @@ import XCTest
 
 class UniversalViewTests: XCTestCase {
     var sut: UniversalView!
-    var mainVC: MainViewController!
+    var mainVC: SheetBarViewController!
     var calculator: WeightCalculatorType = ImperialWeightCalculator()
     var gaugeTextField = DimensionTextField(for: .thickness)
     var widthTextfield = DimensionTextField(for: .width)
     var lengthTextField = DimensionTextField(for: .length)
 
     override func setUp() {
-        mainVC = MainViewController(calculator: calculator)
+        mainVC = SheetBarViewController(calculator: calculator)
         mainVC.loadViewIfNeeded()
         let textFields: [DimensionTextField] = [
             gaugeTextField,

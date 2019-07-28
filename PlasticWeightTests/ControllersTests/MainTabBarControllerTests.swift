@@ -43,43 +43,47 @@ class MainTabBarControllerTests: XCTestCase {
     func test_SheetBarViewControllerRootViewController_IsSheetBarViewController() {
         let rootViewController = sut.sheetBarViewController.viewControllers[0]
         
-        XCTAssertTrue(rootViewController is MainViewController)
+        XCTAssertTrue(rootViewController is SheetBarViewController)
     }
     
     func test_RodViewControllerRootViewController_IsRodViewController() {
         let rootViewController = sut.rodViewController.viewControllers[0]
         
-        XCTAssertTrue(rootViewController is MainViewController)
+        XCTAssertTrue(rootViewController is RodViewController)
     }
     
     func test_RoundTubeViewControllerRootViewController_IsRoundTubeViewController() {
         let rootViewController = sut.roundTubeViewController.viewControllers[0]
         
-        XCTAssertTrue(rootViewController is MainViewController)
+        XCTAssertTrue(rootViewController is RoundTubeViewController)
     }
     
     func test_SquareTubeiewControllerRootViewController_IsSquareTubeViewController() {
         let rootViewController = sut.squareTubeViewController.viewControllers[0]
         
-        XCTAssertTrue(rootViewController is MainViewController)
+        XCTAssertTrue(rootViewController is SquareTubeViewController)
     }
     
     
     // Make sure controllers are within tabbar's view controllers array
     func test_MainTabController_ContainsSheetBarViewController() {
-        XCTAssertTrue((sut.viewControllers?.contains(sut.sheetBarViewController)) ?? false)
+        guard let viewControllers = sut.viewControllers else { return }
+        XCTAssertTrue((viewControllers.contains(sut.sheetBarViewController)))
     }
     
     func test_ContainsRodViewController() {
-        XCTAssertTrue((sut.viewControllers?.contains(sut.rodViewController)) ?? false)
+        guard let viewControllers = sut.viewControllers else { return }
+        XCTAssertTrue((viewControllers.contains(sut.rodViewController)))
     }
     
     func test_ContainsRoundTubeViewController() {
-        XCTAssertTrue((sut.viewControllers?.contains(sut.roundTubeViewController)) ?? false)
+        guard let viewControllers = sut.viewControllers else { return }
+        XCTAssertTrue((viewControllers.contains(sut.roundTubeViewController)))
     }
     
     func test_ContainsSquareTubeViewController() {
-        XCTAssertTrue((sut.viewControllers?.contains(sut.squareTubeViewController)) ?? false)
+        guard let viewControllers = sut.viewControllers else { return }
+        XCTAssertTrue((viewControllers.contains(sut.squareTubeViewController)))
     }
     
     
