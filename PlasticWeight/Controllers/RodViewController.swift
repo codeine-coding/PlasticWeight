@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RodViewController: UIViewController, UniversalViewDelegate {
+class RodViewController: UIViewController, UniversalViewDelegate, ErrorDisplayer {
 
     private var diameterTextField = DimensionTextField(for: .diameter)
     private var lengthTextField = DimensionTextField(for: .length)

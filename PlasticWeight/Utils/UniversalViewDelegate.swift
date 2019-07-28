@@ -13,7 +13,7 @@ protocol UniversalViewDelegate: class {
     func calculateButtonPressed(on view: UniversalView)
 }
 
-extension UniversalViewDelegate where Self: UIViewController {
+extension UniversalViewDelegate where Self: UIViewController & ErrorDisplayer {
     func calculateButtonPressed(on view: UniversalView) {
         guard let selectedMaterialFactor = view.selectedMaterialFactor else {
             showError(for: ErrorMessage.noMaterialSelectedErrorMessage)

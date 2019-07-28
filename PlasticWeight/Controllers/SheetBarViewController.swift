@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SheetBarViewController: UIViewController, UniversalViewDelegate {
+class SheetBarViewController: UIViewController, UniversalViewDelegate, ErrorDisplayer {
     
     private var gaugeTextField = DimensionTextField(for: .thickness)
     private var widthTextfield = DimensionTextField(for: .width)

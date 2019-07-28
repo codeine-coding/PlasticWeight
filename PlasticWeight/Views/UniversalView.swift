@@ -254,13 +254,13 @@ class UniversalView: UIView {
         
     }
 
-    private func showError(for errorMessge: String) {
-        let ac = UIAlertController(title: "Error", message: errorMessge, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        okAction.setValue(UIColor.secondary, forKey: "titleTextColor")
-        ac.addAction(okAction)
-        UIApplication.shared.keyWindow?.rootViewController?.present(ac, animated: true, completion: nil)
-    }
+//    private func showError(for errorMessge: String) {
+//        let ac = UIAlertController(title: "Error", message: errorMessge, preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//        okAction.setValue(UIColor.secondary, forKey: "titleTextColor")
+//        ac.addAction(okAction)
+//        UIApplication.shared.keyWindow?.rootViewController?.present(ac, animated: true, completion: nil)
+//    }
 
     func showWeightLabel(weight: String) {
         clearFieldsBtn.alpha = 1

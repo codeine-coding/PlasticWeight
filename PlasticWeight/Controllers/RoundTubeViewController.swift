@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoundTubeViewController: UIViewController, UniversalViewDelegate {
+class RoundTubeViewController: UIViewController, UniversalViewDelegate, ErrorDisplayer {
 
     private var outerDiameterTextField = DimensionTextField(for: .outerDiameter)
     private var wallTextField = DimensionTextField(for: .wall)

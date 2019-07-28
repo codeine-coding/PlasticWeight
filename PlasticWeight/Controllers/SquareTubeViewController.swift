@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SquareTubeViewController: UIViewController, UniversalViewDelegate {
+class SquareTubeViewController: UIViewController, UniversalViewDelegate, ErrorDisplayer {
     private var outerSquareWidthTextField = DimensionTextField(for: .outerSquareWidth)
     private var wallTextField = DimensionTextField(for: .wall)
     private var lengthTextField = DimensionTextField(for: .length)
