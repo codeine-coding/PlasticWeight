@@ -18,7 +18,7 @@ class UniversalView: UIView {
 
     var materialType: MaterialType
     var dimensionFields = Form()
-    weak var delegate: MainVCDelegate?
+    weak var delegate: UniversalViewDelegate?
 
     var selectedMaterial: String?
     var selectedMaterialFactor: Double?
@@ -140,7 +140,7 @@ class UniversalView: UIView {
     }()
 
     // MARK: - Methods
-    init(dimensionFields: [DimensionTextField], calculation materialType: MaterialType, delegate: MainVCDelegate) {
+    init(dimensionFields: [DimensionTextField], calculation materialType: MaterialType, delegate: UniversalViewDelegate) {
         self.dimensionFields.controls = dimensionFields
         self.materialType = materialType
         self.delegate = delegate
