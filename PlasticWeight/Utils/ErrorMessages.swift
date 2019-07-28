@@ -9,9 +9,9 @@
 import Foundation
 
 struct ErrorMessage {
-    static let noMaterialSelectedErrorMessage = "Please select material"
-    static let zeroValueErrorMessage = "No field can be zero"
-    static let invalidInputErrorMessage = "Invalid Field Inputs"
-    static let wallGreaterThanErrorMessage = "Wall cannot be greater than "
-    static let unexpectedErrorMessage = "Unexpected error"
+    static let noMaterialSelectedErrorMessage = NSLocalizedString("Please select material", comment: "no material error")
+    static let zeroValueErrorMessage = NSLocalizedString("No field can be zero", comment: "zero value error")
+    static let invalidInputErrorMessage = NSLocalizedString("Invalid field inputs", comment: "invalid input error message")
+    static let wallGreaterThanErrorMessage = NSLocalizedString("Wall cannot be greater than ", comment: "Wall greater than error")
+    static let unexpectedErrorMessage = NSLocalizedString("Unexpected error", comment: "unexpected error")
 }
