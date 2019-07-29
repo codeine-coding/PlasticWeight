@@ -14,3 +14,12 @@ struct TitleStrings {
     static let roundTube = NSLocalizedString("Round Tube", comment: "round tube navigation and bar title")
     static let squareTube = NSLocalizedString("Square Tube", comment: "square tube navigation and bar title")
 }
+
+
+struct ControlStrings {
+    static let selectMaterial = NSLocalizedString("Select Material", comment: "label for material picker")
+    static let calculate = NSLocalizedString("Calculate", comment: "title for calculate button")
+    static let clearFields = NSLocalizedString("Clear Fields", comment: "title for clear fields button")
+    
+    static let done = NSLocalizedString("Done", comment: "done")
+}

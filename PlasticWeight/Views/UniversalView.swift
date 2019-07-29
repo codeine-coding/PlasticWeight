@@ -36,7 +36,7 @@ class UniversalView: UIView {
         textField.textColor = .primary
         textField.textAlignment = .center
         textField.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
-        textField.placeholder = "Select Material"
+        textField.placeholder = ControlStrings.selectMaterial
         return textField
     }()
     
@@ -114,7 +114,7 @@ class UniversalView: UIView {
     // Calc & Clear Button Stack
     var calculateBtn:  RadiusButton = {
         let btn = RadiusButton()
-        btn.setTitle("Calculate", for: .normal)
+        btn.setTitle(ControlStrings.calculate, for: .normal)
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = .secondary
         return btn
@@ -122,7 +122,7 @@ class UniversalView: UIView {
     
     var clearFieldsBtn: RadiusButton = {
         let btn = RadiusButton()
-        btn.setTitle("Clear Fields", for: .normal)
+        btn.setTitle(ControlStrings.clearFields, for: .normal)
         btn.setTitleColor(.primary, for: .normal)
         btn.backgroundColor = .clear
         btn.layer.borderColor = UIColor.primary.cgColor
@@ -224,7 +224,7 @@ class UniversalView: UIView {
     }
     
     private func setupEditingToolBar() {
-        let doneBtn = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismissKeyboard))
+        let doneBtn = UIBarButtonItem(title: ControlStrings.done, style: .plain, target: self, action: #selector(dismissKeyboard))
         textFieldEditingToolBar.setItems([doneBtn], animated: false)
         
         materialTextField.inputAccessoryView = textFieldEditingToolBar

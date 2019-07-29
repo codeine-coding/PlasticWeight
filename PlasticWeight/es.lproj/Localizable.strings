@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  PlasticWeight
+
+  Created by Allen Whearry on 7/28/19.
+  Copyright © 2019 Codeine Technologies LLC. All rights reserved.
+*/
+"Sheet / Bar" = "Hoja / Barra Cuadrada";
+"Rod" = "Barra Redonda";
+"Round Tube" = "Tubo Redondo";
+"Square Tube" = "Tubo Cuadrado";
+"Select Material" = "Seleccione Material Plastico";
+
+"Acrylic" = "Acrílico";
+"Nylon" = "Nylon";
+"Polycarbonate" = "Policarbonato";
+"Expanded/Foam PVC (FPVC)" = "PVC expandido / espuma (FPVC)";
+"Polypropylene" = "Polipropileno";
+"Urethane" = "Uretano";
+"Phenolic C or CE" = "Fenólico C o CE";
+"Phenolic L or LE" = "Fenólico L o LE";
+"Phenolic X or XX" = "Fenólico X o XX";
+"Acetal" = "Acetal";
+"Acetate" = "Acetato";
+
+"Calculate" = "Calcular el Peso";
+"Clear Fields" = "Despeja los campos de texto";
+"Done" = "Terminado";
