@@ -14,19 +14,29 @@ enum InputField {
     var title: String {
         switch self {
         case .thickness:
-            return "(T)hickness"
+            return InputFieldStrings.thickness
         case .width:
-            return "(W)idth"
+            return InputFieldStrings.width
         case .length:
-            return "(L)ength"
+            return InputFieldStrings.length
         case .diameter:
-            return "(D)iameter"
+            return InputFieldStrings.diameter
         case .outerDiameter:
-            return "(O)uter (D)iameter"
+            return InputFieldStrings.outerDiameter
         case .outerSquareWidth:
-            return "(O)uter (S)q. Width"
+            return InputFieldStrings.outerSquareWidth
         case .wall:
-            return "(W)all"
+            return InputFieldStrings.wall
         }
     }
+}
+
+private struct InputFieldStrings {
+    static let thickness = NSLocalizedString("(T)hickness", comment: "(T)hickness")
+    static let width = NSLocalizedString("(W)idth", comment: "(W)idth")
+    static let length = NSLocalizedString("(L)ength", comment: "(L)ength")
+    static let diameter = NSLocalizedString("(D)iameter", comment: "(D)iameter")
+    static let outerDiameter = NSLocalizedString("(O)uter (D)iameter", comment: "(O)uter (D)iameter")
+    static let outerSquareWidth = NSLocalizedString("(O)uter (D)iameter", comment: "(O)uter (S)q. Width")
+    static let wall = NSLocalizedString("(W)all", comment: "(W)all")
 }
