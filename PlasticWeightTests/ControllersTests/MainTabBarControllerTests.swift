@@ -67,23 +67,19 @@ class MainTabBarControllerTests: XCTestCase {
     
     // Make sure controllers are within tabbar's view controllers array
     func test_MainTabController_ContainsSheetBarViewController() {
-        guard let viewControllers = sut.viewControllers else { return }
-        XCTAssertTrue((viewControllers.contains(sut.sheetBarViewController)))
+        XCTAssertTrue((sut.viewControllers!.contains(sut.sheetBarViewController)))
     }
     
     func test_ContainsRodViewController() {
-        guard let viewControllers = sut.viewControllers else { return }
-        XCTAssertTrue((viewControllers.contains(sut.rodViewController)))
+        XCTAssertTrue((sut.viewControllers!.contains(sut.rodViewController)))
     }
     
     func test_ContainsRoundTubeViewController() {
-        guard let viewControllers = sut.viewControllers else { return }
-        XCTAssertTrue((viewControllers.contains(sut.roundTubeViewController)))
+        XCTAssertTrue((sut.viewControllers!.contains(sut.roundTubeViewController)))
     }
     
     func test_ContainsSquareTubeViewController() {
-        guard let viewControllers = sut.viewControllers else { return }
-        XCTAssertTrue((viewControllers.contains(sut.squareTubeViewController)))
+        XCTAssertTrue((sut.viewControllers!.contains(sut.squareTubeViewController)))
     }
     
     
