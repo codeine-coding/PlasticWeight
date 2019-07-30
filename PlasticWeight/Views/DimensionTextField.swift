@@ -18,6 +18,8 @@ class DimensionTextField: UITextField {
     }
     
     private func setupView() {
+        accessibilityLabel = inputType?.title
+        isUserInteractionEnabled = true
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 10.00
         layer.borderColor = UIColor.secondary.cgColor
