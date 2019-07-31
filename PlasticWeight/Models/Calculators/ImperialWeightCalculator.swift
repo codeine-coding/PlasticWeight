@@ -8,25 +8,19 @@
 
 import Foundation
 
-protocol WeightCalculatorType {
-    func calculateSheet(factor: Double, thickness: String, width: String, length: String) throws -> Double
-    func calculateRoundRod(factor: Double, diameter: String, length: String ) throws -> Double
-    func calculateRoundTube(factor: Double, outsideDiameter: String, wall: String, length: String) throws -> Double
-    func calculateSquareTube(factor: Double, outsideSquareWidth: String, wall: String, length: String) throws -> Double
-}
-
 struct ImperialWeightCalculator: WeightCalculatorType {
+    typealias Factor = Double
 
     /// Function to return the calculated weight of sheet/bar material.
     ///
     /// - Parameters:
-    ///   - factor: Value multiplied against the volume of material.
+    ///   - densityMeasure: Value multiplied against the volume of material.
     ///   - thickness: Gauge or height of material in inches.
     ///   - width: How wide material is in inches.
     ///   - length: How long material is in inches.
     /// - Returns: Weight in pounds with four decimal point precision.
     /// - Throws: An error of type CalculationError.
-    func calculateSheet(factor: Double, thickness: String, width: String, length: String) throws -> Double {
+    func calculateSheet(densityMesure: Factor, thickness: String, width: String, length: String) throws -> Double {
         guard let thickness = Double(thickness), let width = Double(width), let length = Double(length) else {
             throw CalculationError.invalidInput
         }
@@ -34,18 +28,18 @@ struct ImperialWeightCalculator: WeightCalculatorType {
             throw CalculationError.zeroValue
         }
         let volume = thickness * width * length
-        return (factor * volume).roundMax3DecimalPlaces
+        return (densityMesure * volume).roundMax3DecimalPlaces
     }
 
     /// Function to return the calculated weight of a round rod.
     ///
     /// - Parameters:
-    ///   - factor: Value multiplied against the volume of material.
+    ///   - densityMeasure: Value multiplied against the volume of material.
     ///   - diameter: diameter of rod in inches
     ///   - length: How long material is in inches
     /// - Returns: Weight in pounds with four decimal point precision.
     /// - Throws: An error of type CalculationError.
-    func calculateRoundRod(factor: Double, diameter: String, length: String ) throws -> Double {
+    func calculateRoundRod(densityMesure: Factor, diameter: String, length: String ) throws -> Double {
         guard let diameter = Double(diameter), let length = Double(length) else {
             throw CalculationError.invalidInput
         }
@@ -55,19 +49,19 @@ struct ImperialWeightCalculator: WeightCalculatorType {
         let PI = Double.pi
         let radius = diameter / 2
         let volume = PI * pow(radius, 2) * length
-        return (factor * volume).roundMax3DecimalPlaces
+        return (densityMesure * volume).roundMax3DecimalPlaces
     }
 
     /// Function to return the calculated weight of a round tube
     ///
     /// - Parameters:
-    ///   - factor: Value multiplied against the volume of material.
+    ///   - densityMeasure: Value multiplied against the volume of material.
     ///   - outsideDiameter: Diameter of outer circle of material.
     ///   - wall: Thickness of actual material between outside diameter and inside diamter.
     ///   - length: How long material is in inches
     /// - Returns: Weight in pounds with four decimal point precision.
     /// - Throws: An error of type CalculationError.
-    func calculateRoundTube(factor: Double, outsideDiameter: String, wall: String, length: String) throws -> Double {
+    func calculateRoundTube(densityMesure: Factor, outsideDiameter: String, wall: String, length: String) throws -> Double {
         guard let outsideDiameter = Double(outsideDiameter), let wall = Double(wall), let length = Double(length) else {
             throw CalculationError.invalidInput
         }
@@ -79,8 +73,8 @@ struct ImperialWeightCalculator: WeightCalculatorType {
         }
 
         let id = String(outsideDiameter - (wall * 2.0))
-        let odVal = try! calculateRoundRod(factor: factor, diameter: String(outsideDiameter), length: String(length))
-        let idVal = try! calculateRoundRod(factor: factor, diameter: id, length: String(length))
+        let odVal = try! calculateRoundRod(densityMesure: densityMesure, diameter: String(outsideDiameter), length: String(length))
+        let idVal = try! calculateRoundRod(densityMesure: densityMesure, diameter: id, length: String(length))
         return (odVal - idVal).roundMax3DecimalPlaces
 
     }
@@ -89,25 +83,25 @@ struct ImperialWeightCalculator: WeightCalculatorType {
     /// Function to return the calculated weight of a square rod.
     ///
     /// - Parameters:
-    ///   - factor: Value multiplied against the volume of material.
+    ///   - densityMeasure: Value multiplied against the volume of material.
     ///   - width: How wide material is in inches.
     ///   - length: How long material is in inches.
     /// - Returns: Weight in pounds with four decimal point precision.
-    func calculateSquareRod(factor: Double, width: Double, length: Double) -> Double {
-        return (factor * (width * 2) * length).roundMax3DecimalPlaces
+    func calculateSquareRod(densityMesure: Factor, width: Double, length: Double) -> Double {
+        return (densityMesure * (width * 2) * length).roundMax3DecimalPlaces
     }
 
 
     /// Function to return the calculated weight of a Square tube
     ///
     /// - Parameters:
-    ///   - factor: Value multiplied against the volume of material.
+    ///   - densityMeasure: Value multiplied against the volume of material.
     ///   - outsideSquareWidth: Width of outer squaree of material.
     ///   - wall: Thickness of actual material between outside square and inside square.
     ///   - length: How long material is in inches
     /// - Returns: Weight in pounds with four decimal point precision.
     /// - Throws: An error of type CalculationError.
-    func calculateSquareTube(factor: Double, outsideSquareWidth: String, wall: String, length: String) throws -> Double {
+    func calculateSquareTube(densityMesure: Factor, outsideSquareWidth: String, wall: String, length: String) throws -> Double {
         guard let outsideSquareWidth = Double(outsideSquareWidth), let wall = Double(wall), let length = Double(length) else {
             throw CalculationError.invalidInput
         }
@@ -118,8 +112,8 @@ struct ImperialWeightCalculator: WeightCalculatorType {
             throw CalculationError.wallDoubledGreaterThanOrEqualToOutterField(outterField: "outer square width")
         }
         let id = outsideSquareWidth - (wall * 2.0)
-        let osWidth = calculateSquareRod(factor: factor, width: outsideSquareWidth, length: length)
-        let isWidth = calculateSquareRod(factor: factor, width: id, length: length)
+        let osWidth = calculateSquareRod(densityMesure: densityMesure, width: outsideSquareWidth, length: length)
+        let isWidth = calculateSquareRod(densityMesure: densityMesure, width: id, length: length)
         return (osWidth - isWidth).roundMax3DecimalPlaces
     }
 }

@@ -25,21 +25,21 @@ extension UniversalViewDelegate where Self: UIViewController & ErrorDisplayer {
             var calculatedValue: Double
             switch view.materialType {
             case .sheetBar:
-                calculatedValue = try calculator.calculateSheet(factor: selectedMaterialFactor,
+                calculatedValue = try calculator.calculateSheet(densityMesure: selectedMaterialFactor,
                                                                 thickness: view.dimensionFields[.thickness],
                                                                 width: view.dimensionFields[.width],
                                                                 length: view.dimensionFields[.length])
             case .rod:
-                calculatedValue = try calculator.calculateRoundRod(factor: selectedMaterialFactor,
+                calculatedValue = try calculator.calculateRoundRod(densityMesure: selectedMaterialFactor,
                                                                    diameter: view.dimensionFields[.diameter],
                                                                    length: view.dimensionFields[.length])
             case .roundTube:
-                calculatedValue = try calculator.calculateRoundTube(factor: selectedMaterialFactor,
+                calculatedValue = try calculator.calculateRoundTube(densityMesure: selectedMaterialFactor,
                                                                     outsideDiameter: view.dimensionFields[.outerDiameter],
                                                                     wall: view.dimensionFields[.wall],
                                                                     length: view.dimensionFields[.length])
             case .squareTube:
-                calculatedValue = try calculator.calculateSquareTube(factor: selectedMaterialFactor,
+                calculatedValue = try calculator.calculateSquareTube(densityMesure: selectedMaterialFactor,
                                                                      outsideSquareWidth: view.dimensionFields[.outerSquareWidth],
                                                                      wall: view.dimensionFields[.wall],
                                                                      length: view.dimensionFields[.length])
