@@ -295,7 +295,6 @@ class UniversalView: UIView {
     }
     
     @objc func receiveNotification(notification: Notification) {
-        print("Notification Recieved on universal view")
         selectedMaterial  = nil
         selectedMaterialDensityMeasure = nil
         materialTextField.text = nil
