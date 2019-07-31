@@ -21,7 +21,7 @@ class UniversalView: UIView {
     weak var delegate: UniversalViewDelegate?
     
     var selectedMaterial: String?
-    var selectedMaterialFactor: Double?
+    var selectedMaterialDensityMeasure: Double?
     var materialTypeImage: UIImageView!
     
     // NSConstraints
@@ -282,7 +282,7 @@ class UniversalView: UIView {
     
     @objc private func clearFieldsBtnPressed(_ sender: Any) {
         selectedMaterial  = nil
-        selectedMaterialFactor = nil
+        selectedMaterialDensityMeasure = nil
         materialTextField.text = nil
         dimensionFields.clear()
         weightLabel.isHidden = true
@@ -365,7 +365,11 @@ extension UniversalView: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let material = plasticManager.materials[row]
         selectedMaterial = material.title
-        selectedMaterialFactor = material.factor
+        if delegate?.calculator is ImperialWeightCalculator {
+            selectedMaterialDensityMeasure = material.factor
+        } else {
+            selectedMaterialDensityMeasure = material.specificGravity
+        }
         materialTextField.text = selectedMaterial
     }
     

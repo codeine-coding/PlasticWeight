@@ -11,10 +11,12 @@ import Foundation
 struct Plastic {
     public private(set) var title: String
     public private(set) var factor: Double
+    public private(set) var specificGravity: Double
 
     
-    init(title: String, factor: Double) {
+    init(title: String, factor: Double, specificGravity: Double) {
         self.title = title
         self.factor = factor
+        self.specificGravity = specificGravity
     }
 }
