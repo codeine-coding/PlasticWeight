@@ -13,8 +13,11 @@ class MainTabBarController: UITabBarController {
     var rodViewController: UINavigationController!
     var roundTubeViewController: UINavigationController!
     var squareTubeViewController: UINavigationController!
+    var settingsViewController: SettingsViewController!
 
-    let calculator: WeightCalculatorType = ImperialWeightCalculator()
+    var calculator: WeightCalculatorType!
+    
+    let defaults = PWUserDefaults.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,25 +28,7 @@ class MainTabBarController: UITabBarController {
         tabBar.tintColor = .secondary
         tabBar.isTranslucent = false
         
-//        sheetBarViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
-//        sheetBarViewController.title = "Sheet / Bar"
-//        sheetBarViewController.tabBarItem.image = UIImage(named: "TabBar/sheet")
-//        sheetBarViewController.tabBarItem.tag = 0
-//
-//        rodViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
-//        rodViewController.title = "Rod"
-//        rodViewController.tabBarItem.image = UIImage(named: "TabBar/rod")
-//        rodViewController.tabBarItem.tag = 1
-//
-//        roundTubeViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
-//        roundTubeViewController.title = "Round Tube"
-//        roundTubeViewController.tabBarItem.image = UIImage(named: "TabBar/roundTube")
-//        roundTubeViewController.tabBarItem.tag = 2
-//
-//        squareTubeViewController = UINavigationController(rootViewController: MainViewController(calculator: calculator))
-//        squareTubeViewController.title = "Square Tube"
-//        squareTubeViewController.tabBarItem.image = UIImage(named: "TabBar/squareTube")
-//        squareTubeViewController.tabBarItem.tag = 3
+        calculator = defaults.isImperialCalculator ? ImperialWeightCalculator() : MetricWeightCalculator()
         
         sheetBarViewController = UINavigationController(rootViewController: SheetBarViewController(calculator: calculator))
         sheetBarViewController.title = TitleStrings.sheetbar
@@ -64,6 +49,7 @@ class MainTabBarController: UITabBarController {
         squareTubeViewController.title = TitleStrings.squareTube
         squareTubeViewController.tabBarItem.image = UIImage(named: "TabBar/squareTube")
         squareTubeViewController.tabBarItem.tag = 3
+        
         
         viewControllers = [sheetBarViewController, rodViewController,
                            roundTubeViewController, squareTubeViewController]

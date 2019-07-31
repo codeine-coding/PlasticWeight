@@ -18,6 +18,10 @@
 		9F28CFAD22EE4F680068E71A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F28CFAF22EE4F680068E71A /* Localizable.strings */; };
 		9F28CFB322F124010068E71A /* WeightCalculatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFB222F124010068E71A /* WeightCalculatorType.swift */; };
 		9F28CFB522F126990068E71A /* MetricWeightCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFB422F126990068E71A /* MetricWeightCalculator.swift */; };
+		9F28CFB922F129840068E71A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFB722F129840068E71A /* SettingsViewController.swift */; };
+		9F28CFBA22F129840068E71A /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F28CFB822F129840068E71A /* SettingsViewController.xib */; };
+		9F28CFBE22F136A30068E71A /* PWUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFBD22F136A30068E71A /* PWUserDefaults.swift */; };
+		9F28CFC122F145C60068E71A /* BaseMaterialTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFC022F145C60068E71A /* BaseMaterialTypeViewController.swift */; };
 		9F2D87A22293159A00205B6E /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D87A12293159A00205B6E /* InputField.swift */; };
 		9F2D87A422931D9900205B6E /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D87A322931D9900205B6E /* Form.swift */; };
 		9FB8B1FC2287E3FD00AD393E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */; };
@@ -79,6 +83,10 @@
 		9F28CFB122EE4F830068E71A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9F28CFB222F124010068E71A /* WeightCalculatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorType.swift; sourceTree = "<group>"; };
 		9F28CFB422F126990068E71A /* MetricWeightCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricWeightCalculator.swift; sourceTree = "<group>"; };
+		9F28CFB722F129840068E71A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9F28CFB822F129840068E71A /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		9F28CFBD22F136A30068E71A /* PWUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWUserDefaults.swift; sourceTree = "<group>"; };
+		9F28CFC022F145C60068E71A /* BaseMaterialTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMaterialTypeViewController.swift; sourceTree = "<group>"; };
 		9F2D87A12293159A00205B6E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		9F2D87A322931D9900205B6E /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
@@ -158,6 +166,14 @@
 			path = Calculators;
 			sourceTree = "<group>";
 		};
+		9F28CFBF22F1459D0068E71A /* BaseMaterialTypeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9F28CFC022F145C60068E71A /* BaseMaterialTypeViewController.swift */,
+			);
+			path = BaseMaterialTypeViewController;
+			sourceTree = "<group>";
+		};
 		9FBF2B89218E09BB009212BE = {
 			isa = PBXGroup;
 			children = (
@@ -232,11 +248,14 @@
 		9FBF2BC7218E4978009212BE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9F28CFBF22F1459D0068E71A /* BaseMaterialTypeViewController */,
 				9FBF2BE4218EACC6009212BE /* MainTabBarController.swift */,
 				9F28CF9922EE34FD0068E71A /* SheetBarViewController.swift */,
 				9F28CF9B22EE35370068E71A /* RodViewController.swift */,
 				9F28CF9D22EE35560068E71A /* RoundTubeViewController.swift */,
 				9F28CF9F22EE35660068E71A /* SquareTubeViewController.swift */,
+				9F28CFB722F129840068E71A /* SettingsViewController.swift */,
+				9F28CFB822F129840068E71A /* SettingsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +293,7 @@
 				9F28CFA122EE36360068E71A /* UniversalViewDelegate.swift */,
 				9F28CFA422EE3FE20068E71A /* ErrorDisplayer.swift */,
 				9F28CFA822EE4C300068E71A /* Strings.swift */,
+				9F28CFBD22F136A30068E71A /* PWUserDefaults.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -424,6 +444,7 @@
 				9F28CFAD22EE4F680068E71A /* Localizable.strings in Resources */,
 				9FBF2BC4218E0F9C009212BE /* .gitignore in Resources */,
 				9FBF2B9D218E09BD009212BE /* Assets.xcassets in Resources */,
+				9F28CFBA22F129840068E71A /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +475,7 @@
 				9F28CFB522F126990068E71A /* MetricWeightCalculator.swift in Sources */,
 				9FBF2BDE218E98F4009212BE /* Extensions.swift in Sources */,
 				9FBF2BDA218E9851009212BE /* ImperialWeightCalculator.swift in Sources */,
+				9F28CFC122F145C60068E71A /* BaseMaterialTypeViewController.swift in Sources */,
 				9FBF2C1321903F6D009212BE /* ErrorMessages.swift in Sources */,
 				9F2D87A22293159A00205B6E /* InputField.swift in Sources */,
 				9FBF2BE5218EACC6009212BE /* MainTabBarController.swift in Sources */,
@@ -464,6 +486,7 @@
 				9FBF2C0B21900FA6009212BE /* RadiusButton.swift in Sources */,
 				9F28CFA522EE3FE20068E71A /* ErrorDisplayer.swift in Sources */,
 				9FBF2C0F21903763009212BE /* TextFieldStackView.swift in Sources */,
+				9F28CFBE22F136A30068E71A /* PWUserDefaults.swift in Sources */,
 				9FBF2BF9218EE3BD009212BE /* DimensionTextField.swift in Sources */,
 				9F28CFA022EE35660068E71A /* SquareTubeViewController.swift in Sources */,
 				9F28CFB322F124010068E71A /* WeightCalculatorType.swift in Sources */,
@@ -471,6 +494,7 @@
 				9F28CFA222EE36360068E71A /* UniversalViewDelegate.swift in Sources */,
 				9FBF2B96218E09BB009212BE /* AppDelegate.swift in Sources */,
 				9F2D87A422931D9900205B6E /* Form.swift in Sources */,
+				9F28CFB922F129840068E71A /* SettingsViewController.swift in Sources */,
 				9FBF2C09219008BF009212BE /* DimensionLabel.swift in Sources */,
 				9FBF2BF7218EDFD6009212BE /* MaterialType.swift in Sources */,
 			);

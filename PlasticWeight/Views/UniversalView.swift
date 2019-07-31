@@ -29,6 +29,8 @@ class UniversalView: UIView {
     private var SEConstraints: [NSLayoutConstraint] = []
     private var greaterThanSEConstraints: [NSLayoutConstraint] = []
     
+    let calculatorChangeNotification = NotificationCenter.default
+    
     // Material Choice Stack
     var materialTextField: UITextField = {
         let textField = UITextField()
@@ -148,6 +150,7 @@ class UniversalView: UIView {
         self.materialType = materialType
         self.delegate = delegate
         super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        calculatorChangeNotification.addObserver(self, selector: #selector(receiveNotification(notification:)), name: NSNotification.Name(CalculatorNotificationName), object: nil)
         setupView()
     }
     
@@ -281,6 +284,18 @@ class UniversalView: UIView {
     }
     
     @objc private func clearFieldsBtnPressed(_ sender: Any) {
+        selectedMaterial  = nil
+        selectedMaterialDensityMeasure = nil
+        materialTextField.text = nil
+        dimensionFields.clear()
+        weightLabel.isHidden = true
+        poundsLabel.isHidden = true
+        clearFieldsBtn.alpha = 0
+        materialTypeImage.isHidden = false
+    }
+    
+    @objc func receiveNotification(notification: Notification) {
+        print("Notification Recieved on universal view")
         selectedMaterial  = nil
         selectedMaterialDensityMeasure = nil
         materialTextField.text = nil

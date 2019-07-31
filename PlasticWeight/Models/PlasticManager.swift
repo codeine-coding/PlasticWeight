@@ -14,8 +14,8 @@ class PlasticManager {
     init() {
         materials.append(contentsOf: [
             Plastic(title: "", factor: 0.0, specificGravity: 0.0),
-            Plastic(title: NSLocalizedString("Nylon", comment: "Nylon"), factor: 0.041, specificGravity: 0.0),
-            Plastic(title: NSLocalizedString("Acrylic", comment: "Acrylic"), factor: 0.0436, specificGravity: 0.0),
+            Plastic(title: NSLocalizedString("Nylon", comment: "Nylon"), factor: 0.041, specificGravity: 1.14),
+            Plastic(title: NSLocalizedString("Acrylic", comment: "Acrylic"), factor: 0.0436, specificGravity: 1.21),
             Plastic(title: NSLocalizedString("Polycarbonate", comment: "Polycarbonate"), factor: 0.0436, specificGravity: 0.0),
             Plastic(title: "PETG", factor: 0.0465, specificGravity: 0.0),
             Plastic(title: "HIPS", factor: 0.039, specificGravity: 0.0),
