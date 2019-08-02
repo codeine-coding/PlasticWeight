@@ -45,7 +45,21 @@ extension UniversalViewDelegate where Self: UIViewController & ErrorDisplayer {
                                                                      length: view.dimensionFields[.length])
             }
             
-            view.showWeightLabel(weight: String(calculatedValue))
+            if PWUserDefaults.shared.isImperialCalculator {
+                let measurment = Measurement(value: calculatedValue, unit: UnitMass.pounds)
+                let formatter = MeasurementFormatter()
+                formatter.unitOptions = .providedUnit
+                formatter.numberFormatter.maximumFractionDigits = 4
+                
+                view.showWeightLabel(weight: formatter.string(from: measurment))
+            } else {
+                let measurment = Measurement(value: calculatedValue, unit: UnitMass.grams).converted(to: UnitMass.kilograms)
+                let formatter = MeasurementFormatter()
+                formatter.unitOptions = .providedUnit
+                formatter.numberFormatter.maximumFractionDigits = 4
+                
+                view.showWeightLabel(weight: formatter.string(from: measurment))
+            }
             
         } catch CalculationError.invalidInput {
             showError(for: ErrorMessage.invalidInputErrorMessage)
