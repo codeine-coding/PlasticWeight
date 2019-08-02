@@ -61,11 +61,6 @@ class UniversalViewTests: XCTestCase {
         XCTAssertTrue(weightLabelIsSubView)
     }
 
-    func test_HasPoundsLabel() {
-        let poundsLabelIsSubview = sut.poundsLabel.isDescendant(of: sut)
-        XCTAssertTrue(poundsLabelIsSubview)
-    }
-
     func test_HasWeightPoundsStackView() {
         let stackViewIsSubView = sut.weightPoundStackView.isDescendant(of: sut)
         XCTAssertTrue(stackViewIsSubView)

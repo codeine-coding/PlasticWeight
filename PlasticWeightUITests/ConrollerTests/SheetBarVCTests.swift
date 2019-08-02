@@ -30,8 +30,9 @@ class SheetBarVCTests: XCTestCase {
     
     func testSheetBarVC_isFirstVC() {
         let sheetBar = NSLocalizedString("Sheet / Bar", comment: "sheet bar")
+        let sheet = NSLocalizedString("Sheet", comment: "sheet")
         XCTAssertTrue(app.navigationBars[sheetBar].exists)
-        XCTAssertTrue(app.tabBars.buttons[sheetBar].exists)
+        XCTAssertTrue(app.tabBars.buttons[sheet].exists)
     }
     
     func testSelectMaterialField_Exists() {

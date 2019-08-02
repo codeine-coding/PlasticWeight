@@ -16,7 +16,7 @@ class CalculationErrorTests: XCTestCase {
     
     
     override func setUp() {
-        acrylic = Plastic(title: "Acrylic", factor: 0.0436)
+        acrylic = Plastic(title: "Acrylic", factor: 0.0436, specificGravity: 1.206850341)
         factor = acrylic.factor
     }
     
@@ -31,7 +31,7 @@ class CalculationErrorTests: XCTestCase {
         let width = "48"
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSheet(factor: factor, thickness: thickness, width: width, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSheet(densityMesure: factor, thickness: thickness, width: width, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -41,7 +41,7 @@ class CalculationErrorTests: XCTestCase {
         let width = "0" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSheet(factor: factor, thickness: thickness, width: width, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSheet(densityMesure: factor, thickness: thickness, width: width, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -51,7 +51,7 @@ class CalculationErrorTests: XCTestCase {
         let width = "48"
         let length = "0" // Error
         
-        XCTAssertThrowsError(try calculator.calculateSheet(factor: factor, thickness: thickness, width: width, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSheet(densityMesure: factor, thickness: thickness, width: width, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -62,7 +62,7 @@ class CalculationErrorTests: XCTestCase {
         let diameter = "0" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateRoundRod(factor: factor, diameter: diameter, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundRod(densityMesure: factor, diameter: diameter, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -71,7 +71,7 @@ class CalculationErrorTests: XCTestCase {
         let diameter = "3.00"
         let length = "0" // Error
         
-        XCTAssertThrowsError(try calculator.calculateRoundRod(factor: factor, diameter: diameter, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundRod(densityMesure: factor, diameter: diameter, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -83,7 +83,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0.125"
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateRoundTube(factor: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundTube(densityMesure: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -93,7 +93,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateRoundTube(factor: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundTube(densityMesure: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -103,7 +103,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0.125"
         let length = "0" // Error
         
-        XCTAssertThrowsError(try calculator.calculateRoundTube(factor: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundTube(densityMesure: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -115,7 +115,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0.125"
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSquareTube(factor: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSquareTube(densityMesure: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -125,7 +125,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSquareTube(factor: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSquareTube(densityMesure: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -135,7 +135,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0.125"
         let length = "0" // Error
         
-        XCTAssertThrowsError(try calculator.calculateSquareTube(factor: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSquareTube(densityMesure: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.zeroValue)
         }
     }
@@ -147,7 +147,7 @@ class CalculationErrorTests: XCTestCase {
         let width = "48"
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSheet(factor: factor, thickness: thickness, width: width, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSheet(densityMesure: factor, thickness: thickness, width: width, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -157,7 +157,7 @@ class CalculationErrorTests: XCTestCase {
         let width = "48x" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSheet(factor: factor, thickness: thickness, width: width, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSheet(densityMesure: factor, thickness: thickness, width: width, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -167,7 +167,7 @@ class CalculationErrorTests: XCTestCase {
         let width = "48"
         let length = "96*" // Error
         
-        XCTAssertThrowsError(try calculator.calculateSheet(factor: factor, thickness: thickness, width: width, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSheet(densityMesure: factor, thickness: thickness, width: width, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -178,7 +178,7 @@ class CalculationErrorTests: XCTestCase {
         let diameter = "tx" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateRoundRod(factor: factor, diameter: diameter, length: length)) { error in
+        XCTAssertThrowsError(try calculator.calculateRoundRod(densityMesure: factor, diameter: diameter, length: length)) { error in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -187,7 +187,7 @@ class CalculationErrorTests: XCTestCase {
         let diameter = "3.00"
         let length = "96u" // Error
         
-        XCTAssertThrowsError(try calculator.calculateRoundRod(factor: factor, diameter: diameter, length: length)) { error in
+        XCTAssertThrowsError(try calculator.calculateRoundRod(densityMesure: factor, diameter: diameter, length: length)) { error in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -199,7 +199,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0.125"
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateRoundTube(factor: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundTube(densityMesure: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -209,7 +209,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "hgh" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateRoundTube(factor: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundTube(densityMesure: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -219,7 +219,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0.125"
         let length = "96U" // Error
         
-        XCTAssertThrowsError(try calculator.calculateRoundTube(factor: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundTube(densityMesure: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -231,7 +231,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0.125"
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSquareTube(factor: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSquareTube(densityMesure: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -241,7 +241,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0.gh" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSquareTube(factor: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSquareTube(densityMesure: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -251,7 +251,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "0.125"
         let length = "96P" // Error
         
-        XCTAssertThrowsError(try calculator.calculateSquareTube(factor: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSquareTube(densityMesure: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.invalidInput)
         }
     }
@@ -263,7 +263,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "2.5" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateRoundTube(factor: factor, outsideDiameter: outsideDiamter, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundTube(densityMesure: factor, outsideDiameter: outsideDiamter, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.wallDoubledGreaterThanOrEqualToOutterField(outterField: "outter diameter"))
         }
     }
@@ -273,7 +273,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "1.5" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateRoundTube(factor: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateRoundTube(densityMesure: factor, outsideDiameter: outsideDiameter, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.wallDoubledGreaterThanOrEqualToOutterField(outterField: "outter diameter"))
         }
     }
@@ -283,7 +283,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "2.5" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSquareTube(factor: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSquareTube(densityMesure: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.wallDoubledGreaterThanOrEqualToOutterField(outterField: "outer square width"))
         }
     }
@@ -293,7 +293,7 @@ class CalculationErrorTests: XCTestCase {
         let wall = "1.5" // Error
         let length = "96"
         
-        XCTAssertThrowsError(try calculator.calculateSquareTube(factor: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
+        XCTAssertThrowsError(try calculator.calculateSquareTube(densityMesure: factor, outsideSquareWidth: outsideSquareWidth, wall: wall, length: length)) { (error) in
             XCTAssertEqual(error as? CalculationError, CalculationError.wallDoubledGreaterThanOrEqualToOutterField(outterField: "outer square width"))
         }
     }

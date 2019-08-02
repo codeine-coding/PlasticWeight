@@ -24,7 +24,7 @@ class PlasticWeightUITests: XCTestCase {
     }
 
     func testSheetBarVCTabBarButton_Exists() {
-        let title = "Sheet / Bar"
+        let title = "Sheet"
         XCTAssertTrue(app.tabBars.buttons[title].exists)
     }
 
@@ -46,7 +46,7 @@ class PlasticWeightUITests: XCTestCase {
     func testGetSnapshots() {
         setupSnapshot(app)
         let tabBarsQuery = app.tabBars
-        tabBarsQuery.buttons["Sheet / Bar"].tap()
+        tabBarsQuery.buttons["Sheet"].tap()
         snapshot("01SheetBarView")
         tabBarsQuery.buttons["Rod"].tap()
         snapshot("02RodView")

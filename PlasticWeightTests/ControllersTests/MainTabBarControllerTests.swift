@@ -85,7 +85,7 @@ class MainTabBarControllerTests: XCTestCase {
     
     // Make sure each view controller's tab has a title
     func test_SheetBarViewControllerTab_HasTitle() {
-        XCTAssertEqual(sut.sheetBarViewController.title, "Sheet / Bar")
+        XCTAssertEqual(sut.sheetBarViewController.title, "Sheet")
     }
     
     func test_RodViewControllerTab_HasTitle() {

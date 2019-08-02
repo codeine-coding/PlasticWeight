@@ -21,7 +21,7 @@ class PlasticMaterialTests: XCTestCase {
     }
     
     func test_Init_SetsTitleAndFactor() {
-        let material = Plastic(title: "Acrylic", factor: 0.0436)
+        let material = Plastic(title: "Acrylic", factor: 0.0436, specificGravity: 1.206850341)
         XCTAssertEqual(material.title, "Acrylic")
         XCTAssertEqual(material.factor, 0.0436)
     }
