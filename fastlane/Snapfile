@@ -2,10 +2,16 @@
 
 # A list of devices you want to take the screenshots from
  devices([
-  "Iphone7Plus",
-  "iPhoneSE",
-  "iPhoneXs",
-  "iPhoneXsMax"
+  "iPhone 5s",
+  "iPhone 6s"
+  "iPhone 6s Plus",
+  "iPhone 8",
+  "iPhone 8 Plus",
+  "iPhone SE",
+  "iPhone X",
+  "iPhone Xs",
+  "iPhone Xs Max",
+  "iPhone Xʀ"
 #   "iPad Pro (12.9-inch)",
 #   "iPad Pro (9.7-inch)",
 #   "Apple TV 1080p"
