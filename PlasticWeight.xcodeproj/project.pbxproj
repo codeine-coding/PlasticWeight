@@ -89,7 +89,7 @@
 		9F2D87A12293159A00205B6E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		9F2D87A322931D9900205B6E /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		9F6ECFB222F3CF5300937050 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
-		9F6ECFB322F3CF5300937050 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
+		9F6ECFB622F40AB800937050 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		9FBF2B92218E09BB009212BE /* PlasticWeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlasticWeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBF2B95218E09BB009212BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -554,7 +554,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9F6ECFB222F3CF5300937050 /* en */,
-				9F6ECFB322F3CF5300937050 /* es */,
+				9F6ECFB622F40AB800937050 /* es */,
 			);
 			name = SettingsViewController.xib;
 			sourceTree = "<group>";
