@@ -26,3 +26,8 @@
 "Calculate" = "Calcular el Peso";
 "Clear Fields" = "Despeja los campos de texto";
 "Done" = "Terminado";
+"Please select material" = "Por favor seleccione material";
+"No field can be zero" = "Ningún campo puede ser cero";
+"Invalid field inputs" = "Entradas de campo inválidas";
+"Wall cannot be greater than " = "El muro no puede ser mayor que ";
+"Unexpected error" = "Error inesperado";
