@@ -19,11 +19,11 @@
 		9F28CFB322F124010068E71A /* WeightCalculatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFB222F124010068E71A /* WeightCalculatorType.swift */; };
 		9F28CFB522F126990068E71A /* MetricWeightCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFB422F126990068E71A /* MetricWeightCalculator.swift */; };
 		9F28CFB922F129840068E71A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFB722F129840068E71A /* SettingsViewController.swift */; };
-		9F28CFBA22F129840068E71A /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F28CFB822F129840068E71A /* SettingsViewController.xib */; };
 		9F28CFBE22F136A30068E71A /* PWUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFBD22F136A30068E71A /* PWUserDefaults.swift */; };
 		9F28CFC122F145C60068E71A /* BaseMaterialTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28CFC022F145C60068E71A /* BaseMaterialTypeViewController.swift */; };
 		9F2D87A22293159A00205B6E /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D87A12293159A00205B6E /* InputField.swift */; };
 		9F2D87A422931D9900205B6E /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D87A322931D9900205B6E /* Form.swift */; };
+		9F6ECFAB22F3CF3D00937050 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6ECFAD22F3CF3D00937050 /* SettingsViewController.xib */; };
 		9FB8B1FC2287E3FD00AD393E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */; };
 		9FBF2B96218E09BB009212BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF2B95218E09BB009212BE /* AppDelegate.swift */; };
 		9FBF2B9D218E09BD009212BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF2B9C218E09BD009212BE /* Assets.xcassets */; };
@@ -84,11 +84,12 @@
 		9F28CFB222F124010068E71A /* WeightCalculatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCalculatorType.swift; sourceTree = "<group>"; };
 		9F28CFB422F126990068E71A /* MetricWeightCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricWeightCalculator.swift; sourceTree = "<group>"; };
 		9F28CFB722F129840068E71A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		9F28CFB822F129840068E71A /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		9F28CFBD22F136A30068E71A /* PWUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWUserDefaults.swift; sourceTree = "<group>"; };
 		9F28CFC022F145C60068E71A /* BaseMaterialTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMaterialTypeViewController.swift; sourceTree = "<group>"; };
 		9F2D87A12293159A00205B6E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		9F2D87A322931D9900205B6E /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		9F6ECFB222F3CF5300937050 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
+		9F6ECFB322F3CF5300937050 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		9FBF2B92218E09BB009212BE /* PlasticWeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlasticWeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBF2B95218E09BB009212BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -255,7 +256,7 @@
 				9F28CF9D22EE35560068E71A /* RoundTubeViewController.swift */,
 				9F28CF9F22EE35660068E71A /* SquareTubeViewController.swift */,
 				9F28CFB722F129840068E71A /* SettingsViewController.swift */,
-				9F28CFB822F129840068E71A /* SettingsViewController.xib */,
+				9F6ECFAD22F3CF3D00937050 /* SettingsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -444,7 +445,7 @@
 				9F28CFAD22EE4F680068E71A /* Localizable.strings in Resources */,
 				9FBF2BC4218E0F9C009212BE /* .gitignore in Resources */,
 				9FBF2B9D218E09BD009212BE /* Assets.xcassets in Resources */,
-				9F28CFBA22F129840068E71A /* SettingsViewController.xib in Resources */,
+				9F6ECFAB22F3CF3D00937050 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +548,15 @@
 				9F28CFB122EE4F830068E71A /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9F6ECFAD22F3CF3D00937050 /* SettingsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F6ECFB222F3CF5300937050 /* en */,
+				9F6ECFB322F3CF5300937050 /* es */,
+			);
+			name = SettingsViewController.xib;
 			sourceTree = "<group>";
 		};
 		9FBF2B9E218E09BD009212BE /* LaunchScreen.storyboard */ = {
