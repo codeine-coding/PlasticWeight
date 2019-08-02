@@ -27,7 +27,8 @@ struct MetricWeightCalculator: WeightCalculatorType {
         guard thickness != 0, width != 0, length != 0 else {
             throw CalculationError.zeroValue
         }
-        let volume = thickness * width * length
+        
+        let volume = (thickness / 10) * (width / 10) * (length / 10)
         return (densityMesure * volume).roundMax3DecimalPlaces
     }
     
@@ -48,7 +49,7 @@ struct MetricWeightCalculator: WeightCalculatorType {
         }
         let PI = Double.pi
         let radius = diameter / 2
-        let volume = PI * pow(radius, 2) * length
+        let volume = PI * pow(radius, 2) * (length / 10)
         return (densityMesure * volume).roundMax3DecimalPlaces
     }
     
@@ -88,7 +89,7 @@ struct MetricWeightCalculator: WeightCalculatorType {
     ///   - length: How long material is in inches.
     /// - Returns: Weight in pounds with four decimal point precision.
     func calculateSquareRod(densityMesure: SpecificGravity, width: Double, length: Double) -> Double {
-        return (densityMesure * (width * 2) * length).roundMax3DecimalPlaces
+        return (densityMesure * ((width / 10) * 2) * (length / 10)).roundMax3DecimalPlaces
     }
     
     
