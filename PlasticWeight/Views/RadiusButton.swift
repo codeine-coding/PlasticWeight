@@ -34,6 +34,5 @@ class RadiusButton: UIButton {
     
     private func setupView() {
         layer.cornerRadius = 10.0
-        titleLabel?.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
     }
 }

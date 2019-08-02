@@ -112,6 +112,7 @@ class UniversalView: UIView {
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = .secondary
         btn.accessibilityLabel = ControlStrings.calculate
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
         return btn
     }()
     
@@ -123,6 +124,7 @@ class UniversalView: UIView {
         btn.layer.borderColor = UIColor.primary.cgColor
         btn.layer.borderWidth = 3
         btn.accessibilityLabel = ControlStrings.clearFields
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
         return btn
     }()
     
