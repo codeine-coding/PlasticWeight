@@ -89,7 +89,7 @@ class UniversalView: UIView {
         label.text = "Label"
         label.textColor = .secondary
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 36, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         label.numberOfLines = 0
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -112,7 +112,7 @@ class UniversalView: UIView {
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = .secondary
         btn.accessibilityLabel = ControlStrings.calculate
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
         return btn
     }()
     
@@ -124,7 +124,7 @@ class UniversalView: UIView {
         btn.layer.borderColor = UIColor.primary.cgColor
         btn.layer.borderWidth = 3
         btn.accessibilityLabel = ControlStrings.clearFields
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
         return btn
     }()
     
@@ -347,6 +347,14 @@ extension UniversalView {
         
         if screenWdith <= 320 {
             NSLayoutConstraint.activate(SEConstraints)
+            clearFieldsBtn.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+            calculateBtn.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+            materialTextField.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+            
+            guard let fields = dimensionFields.controls as? [DimensionTextField] else { return }
+            for field in fields {
+                field.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+            }
         } else {
             NSLayoutConstraint.activate(greaterThanSEConstraints)
         }
