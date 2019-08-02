@@ -58,7 +58,7 @@ class SettingsViewController: UIViewController {
     }
     @IBAction func emailMeBtnPressed(_ sender: Any) {
         guard MFMailComposeViewController.canSendMail() else {
-            showError(for: "Mail Services are not available!")
+            showError(for: NSLocalizedString("Mail Services are not available!", comment: "Mail not available"))
             return
         }
         let composeVC = MFMailComposeViewController()
@@ -71,7 +71,7 @@ class SettingsViewController: UIViewController {
     }
     @IBAction func shareAppBtnPressed(_ sender: Any) {
         guard MFMessageComposeViewController.canSendText() else {
-            showError(for: "SMS services are not available")
+            showError(for: NSLocalizedString("SMS services are not available", comment: "SMS not available"))
             return
         }
         
