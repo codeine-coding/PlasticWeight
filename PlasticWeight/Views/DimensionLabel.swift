@@ -15,7 +15,7 @@ class DimensionLabel: UILabel {
         textColor = .primary
         textAlignment = .center
         lineBreakMode = .byWordWrapping
-        numberOfLines = 2
+        numberOfLines = 3
         font = UIFont.systemFont(ofSize: 16)
     }
     

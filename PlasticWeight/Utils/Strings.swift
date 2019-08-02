@@ -9,7 +9,8 @@
 import Foundation
 
 struct TitleStrings {
-    static let sheetbar = NSLocalizedString("Sheet / Bar", comment: "sheet / bar navigation and bar title")
+    static let sheetbar = NSLocalizedString("Sheet / Bar", comment: "sheet / bar navigation title")
+    static let sheet = NSLocalizedString("Sheet", comment: "sheet bar title")
     static let rod = NSLocalizedString("Rod", comment: "rod navigation and bar title")
     static let roundTube = NSLocalizedString("Round Tube", comment: "round tube navigation and bar title")
     static let squareTube = NSLocalizedString("Square Tube", comment: "square tube navigation and bar title")

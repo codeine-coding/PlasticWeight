@@ -31,7 +31,7 @@ class MainTabBarController: UITabBarController {
         calculator = defaults.isImperialCalculator ? ImperialWeightCalculator() : MetricWeightCalculator()
         
         sheetBarViewController = UINavigationController(rootViewController: SheetBarViewController(calculator: calculator))
-        sheetBarViewController.title = TitleStrings.sheetbar
+        sheetBarViewController.title = TitleStrings.sheet
         sheetBarViewController.tabBarItem.image = UIImage(named: "TabBar/sheet")
         sheetBarViewController.tabBarItem.tag = 0
         

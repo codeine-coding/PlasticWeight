@@ -5,7 +5,8 @@
   Created by Allen Whearry on 7/28/19.
   Copyright © 2019 Codeine Technologies LLC. All rights reserved.
 */
-"Sheet / Bar" = "Hoja / Barra Cuadrada";
+"Sheet / Bar" = "Lámina / Barra Cuadrada";
+"Sheet" = "Lámina";
 "Rod" = "Barra Redonda";
 "Round Tube" = "Tubo Redondo";
 "Square Tube" = "Tubo Cuadrado";
@@ -22,6 +23,8 @@
 "Phenolic X or XX" = "Fenólico X o XX";
 "Acetal" = "Acetal";
 "Acetate" = "Acetato";
+"PTFE - 25% Glass Filled" = "PTFE - 25% Lleno de Vidrio";
+"PTFE - 25% Carbon Filled" = "PTFE - 25% Lleno de Carbono";
 
 "Calculate" = "Calcular el Peso";
 "Clear Fields" = "Despeja los campos de texto";
@@ -34,3 +37,11 @@
 "Unexpected error" = "Error inesperado";
 "SMS services are not available" = "Los servicios de SMS no están disponibles.";
 "Mail Services are not available!" = "¡Los servicios de correo no están disponibles!";
+
+"(T)hickness" = "(T) - Grosor";
+"(W)idth" = "(W) - Ancho";
+"(L)ength" = "(L)ongitud";
+"(D)iameter" = "(D)iametro";
+"(O)uter (D)iameter" = "(OD) - Diámetro Externo";
+"(O)uter (S)q. Width" = "(OS) - Ancho Exterior";
+"(W)all" = "(W) - Pared";

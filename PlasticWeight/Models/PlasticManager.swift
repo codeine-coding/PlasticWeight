@@ -39,8 +39,8 @@ class PlasticManager {
             Plastic(title: NSLocalizedString("Phenolic L or LE", comment: "Phenolic L or LE"), factor: 0.048, specificGravity: 1.34),
             Plastic(title: NSLocalizedString("Phenolic X or XX", comment: "Phenolic X or XX"), factor: 0.049, specificGravity: 1.35),
             Plastic(title: "PTFE", factor: 0.0783, specificGravity: 2.16),
-            Plastic(title: "PTFE 25% Glass Filled", factor: 0.081, specificGravity: 2.25),
-            Plastic(title: "PTFE 25% Carbon Filled", factor: 0.075, specificGravity: 2.08),
+            Plastic(title: NSLocalizedString("PTFE - 25% Glass Filled", comment: "glass filled"), factor: 0.081, specificGravity: 2.25),
+            Plastic(title: NSLocalizedString("PTFE - 25% Carbon Filled", comment: "carbon filled"), factor: 0.075, specificGravity: 2.08),
             Plastic(title: "PEEK", factor: 0.0473, specificGravity: 1.31),
             Plastic(title: NSLocalizedString("Acetate", comment: "Acetate"), factor: 0.04881, specificGravity: 1.35)
         ].sorted(by: { $0.title < $1.title }))
