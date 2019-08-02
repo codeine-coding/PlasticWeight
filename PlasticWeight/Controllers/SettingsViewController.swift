@@ -12,6 +12,9 @@ let CalculatorNotificationName = "CalculatorChangeNotification"
 
 class SettingsViewController: UIViewController {
     @IBOutlet weak var calculatorSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var developerImage: UIImageView!
+    @IBOutlet weak var emailMeBtn: RadiusButton!
+    @IBOutlet weak var shareAppBtn: RadiusButton!
     
     let calculatorChangeNotification = NotificationCenter.default
     
@@ -22,8 +25,10 @@ class SettingsViewController: UIViewController {
         let doneBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(doneBtnPressed))
         doneBtn.tintColor = .white
         navigationItem.leftBarButtonItem = doneBtn
-        calculatorSegmentedControl.tintColor = UIColor.primary
         calculatorSegmentedControl.selectedSegmentIndex = defaults.isImperialCalculator ? 0 : 1
+        developerImage.layer.cornerRadius = 45
+        developerImage.layer.borderColor = UIColor.primary.cgColor
+        developerImage.layer.borderWidth = 2.0
     }
 
 
@@ -50,5 +55,9 @@ class SettingsViewController: UIViewController {
     @objc func doneBtnPressed() {
         dismiss(animated: true, completion: nil)
     }
-
+    @IBAction func emailMeBtnPressed(_ sender: Any) {
+    }
+    @IBAction func shareAppBtnPressed(_ sender: Any) {
+    }
+    
 }
