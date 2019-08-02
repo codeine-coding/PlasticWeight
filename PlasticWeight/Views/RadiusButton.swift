@@ -8,16 +8,32 @@
 
 import UIKit
 
+@IBDesignable
 class RadiusButton: UIButton {
+    
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        
+        set {
+            layer.cornerRadius = newValue
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 10.00
-        titleLabel?.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
+        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        setupView()
+    }
+    
+    private func setupView() {
+        layer.cornerRadius = 10.0
+        titleLabel?.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
     }
 }
