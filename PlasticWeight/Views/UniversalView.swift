@@ -95,15 +95,6 @@ class UniversalView: UIView {
         return label
     }()
     
-    var poundsLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Pounds"
-        label.textColor = .primary
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        return label
-    }()
-    
     var weightPoundStackView: UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
@@ -170,9 +161,7 @@ class UniversalView: UIView {
         addSubview(materialTypeImage)
         addSubview(weightPoundStackView)
         weightLabel.isHidden = true
-        poundsLabel.isHidden = true
         weightPoundStackView.addArrangedSubview(weightLabel)
-        weightPoundStackView.addArrangedSubview(poundsLabel)
         
         
         addSubview(buttonStackView)
@@ -267,7 +256,6 @@ class UniversalView: UIView {
         weightLabel.isHidden = false
         
         weightLabel.text = weight
-        poundsLabel.isHidden = false
     }
     
     // MARK: Action Methods
@@ -289,7 +277,6 @@ class UniversalView: UIView {
         materialTextField.text = nil
         dimensionFields.clear()
         weightLabel.isHidden = true
-        poundsLabel.isHidden = true
         clearFieldsBtn.alpha = 0
         materialTypeImage.isHidden = false
     }
@@ -300,7 +287,6 @@ class UniversalView: UIView {
         materialTextField.text = nil
         dimensionFields.clear()
         weightLabel.isHidden = true
-        poundsLabel.isHidden = true
         clearFieldsBtn.alpha = 0
         materialTypeImage.isHidden = false
     }
