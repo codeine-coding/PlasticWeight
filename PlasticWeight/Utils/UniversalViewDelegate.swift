@@ -49,14 +49,14 @@ extension UniversalViewDelegate where Self: UIViewController & ErrorDisplayer {
                 let measurment = Measurement(value: calculatedValue, unit: UnitMass.pounds)
                 let formatter = MeasurementFormatter()
                 formatter.unitOptions = .providedUnit
-                formatter.numberFormatter.maximumFractionDigits = 4
+                formatter.numberFormatter.maximumFractionDigits = 2
                 
                 view.showWeightLabel(weight: formatter.string(from: measurment))
             } else {
-                let measurment = Measurement(value: calculatedValue, unit: UnitMass.grams).converted(to: UnitMass.kilograms)
+                let measurment = Measurement(value: calculatedValue, unit: UnitMass.milligrams).converted(to: UnitMass.kilograms)
                 let formatter = MeasurementFormatter()
                 formatter.unitOptions = .providedUnit
-                formatter.numberFormatter.maximumFractionDigits = 4
+                formatter.numberFormatter.maximumFractionDigits = 2
                 
                 view.showWeightLabel(weight: formatter.string(from: measurment))
             }
