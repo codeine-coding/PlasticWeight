@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 let CalculatorNotificationName = "CalculatorChangeNotification"
 
@@ -56,8 +57,50 @@ class SettingsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func emailMeBtnPressed(_ sender: Any) {
+        guard MFMailComposeViewController.canSendMail() else {
+            showError(for: "Mail Services are not available!")
+            return
+        }
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self
+        composeVC.setToRecipients(["allen@codeinecoding.com"])
+        composeVC.setSubject("I Love this app!")
+        composeVC.setMessageBody("Here are my questions and suggestions:", isHTML: false)
+        self.present(composeVC, animated: true, completion: nil)
+        
     }
     @IBAction func shareAppBtnPressed(_ sender: Any) {
+        guard MFMessageComposeViewController.canSendText() else {
+            showError(for: "SMS services are not available")
+            return
+        }
+        
+        let composeVC = MFMessageComposeViewController()
+        composeVC.messageComposeDelegate = self
+        composeVC.body = """
+        Check out this Plastic Weight Calculator:
+        
+        https://apps.apple.com/us/app/plastic-weight/id1441487729
+        """
+        
     }
     
+}
+
+extension SettingsViewController: MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate, ErrorDisplayer {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        guard error == nil else {
+            controller.dismiss(animated: true) { [weak self] in
+                self?.showError(for: error!.localizedDescription)
+            }
+            return
+        }
+        
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
