@@ -27,6 +27,12 @@ class BaseMaterialTypeViewController: UIViewController, UniversalViewDelegate, E
         let settingsBtn = UIBarButtonItem(image: UIImage(named: "settings"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(settingsBtnPressed))
         settingsBtn.tintColor = .white
         navigationItem.rightBarButtonItem = settingsBtn
+        
+        let scrrenWidth = UIScreen.main.bounds.width
+        if scrrenWidth <= 320 {
+            let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24, weight: .bold)]
+            navigationController?.navigationBar.largeTitleTextAttributes = attributes
+        }
     }
     
     @objc func settingsBtnPressed() {
