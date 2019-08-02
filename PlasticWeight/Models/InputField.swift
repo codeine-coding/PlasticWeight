@@ -30,13 +30,3 @@ enum InputField {
         }
     }
 }
-
-private struct InputFieldStrings {
-    static let thickness = NSLocalizedString("(T)hickness", comment: "(T)hickness")
-    static let width = NSLocalizedString("(W)idth", comment: "(W)idth")
-    static let length = NSLocalizedString("(L)ength", comment: "(L)ength")
-    static let diameter = NSLocalizedString("(D)iameter", comment: "(D)iameter")
-    static let outerDiameter = NSLocalizedString("(O)uter (D)iameter", comment: "(O)uter (D)iameter")
-    static let outerSquareWidth = NSLocalizedString("(O)uter (D)iameter", comment: "(O)uter (S)q. Width")
-    static let wall = NSLocalizedString("(W)all", comment: "(W)all")
-}
