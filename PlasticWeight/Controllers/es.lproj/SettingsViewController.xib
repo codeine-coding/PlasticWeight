@@ -30,7 +30,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIr-LR-kCG" userLabel="contentView">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="789"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQA-CP-Wb9">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de calculadora:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQA-CP-Wb9">
                                     <rect key="frame" x="20" y="8" width="374" height="29"/>
                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                     <color key="textColor" red="0.32941176470588235" green="0.13725490196078433" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,7 +43,7 @@
                                     </constraints>
                                     <segments>
                                         <segment title="Imperial"/>
-                                        <segment title="Metric"/>
+                                        <segment title="Métrico"/>
                                     </segments>
                                     <color key="tintColor" red="0.57254901960000004" green="0.1529411765" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
@@ -58,7 +58,7 @@
                                         <constraint firstAttribute="height" constant="2" id="Loz-zR-9Jt"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwq-pB-Mul">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de calculadora:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwq-pB-Mul">
                                     <rect key="frame" x="20" y="115" width="374" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="0Hh-HR-ryq"/>
@@ -68,22 +68,22 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbE-7s-YR3">
-                                    <rect key="frame" x="20" y="161" width="374" height="101.5"/>
-                                    <string key="text">Thank you for downloading this application! The Plastic Weight Calculator takes your material dimensions and returns the estimated weight for the selected material. You can choose between the imperial or metric system calculators.</string>
+                                    <rect key="frame" x="20" y="161" width="374" height="122"/>
+                                    <string key="text">¡Gracias por descargar esta aplicación! La calculadora de peso de plástico toma las dimensiones de su material y devuelve el peso estimado para el material seleccionado. Puede elegir entre las calculadoras del sistema imperial o métrico.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcZ-ao-qqF">
-                                    <rect key="frame" x="20" y="398.5" width="374" height="2"/>
+                                    <rect key="frame" x="20" y="419" width="374" height="2"/>
                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="iT7-a5-huz"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Developer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCh-le-CkV">
-                                    <rect key="frame" x="20" y="416.5" width="374" height="30"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El desarrollador:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCh-le-CkV">
+                                    <rect key="frame" x="20" y="437" width="374" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="1Hd-ON-2zW"/>
                                     </constraints>
@@ -92,7 +92,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="developer" translatesAutoresizingMaskIntoConstraints="NO" id="5Ux-yV-VV3">
-                                    <rect key="frame" x="20" y="462.5" width="150" height="150"/>
+                                    <rect key="frame" x="20" y="483" width="150" height="150"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="150" id="GSD-Ec-ndB"/>
                                         <constraint firstAttribute="height" constant="150" id="Gsu-tw-dFb"/>
@@ -101,13 +101,13 @@
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jH-zv-WJi" customClass="RadiusButton" customModule="PlasticWeight" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="338.5" width="374" height="44"/>
+                                    <rect key="frame" x="20" y="359" width="374" height="44"/>
                                     <color key="backgroundColor" red="0.5725490196078431" green="0.15294117647058825" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="iMw-iU-uaA"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                    <state key="normal" title="Share App!">
+                                    <state key="normal" title="¡Compartir aplicación!">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
@@ -115,13 +115,13 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65u-jt-4oT" customClass="RadiusButton" customModule="PlasticWeight" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="278.5" width="374" height="44"/>
+                                    <rect key="frame" x="20" y="299" width="374" height="44"/>
                                     <color key="backgroundColor" red="0.5725490196078431" green="0.15294117647058825" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="A6m-IK-zYx"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                    <state key="normal" title="Email Me!">
+                                    <state key="normal" title="¡Envíeme un correo electrónico!">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
