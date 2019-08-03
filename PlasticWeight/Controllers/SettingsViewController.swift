@@ -82,7 +82,7 @@ class SettingsViewController: UIViewController {
         
         https://apps.apple.com/us/app/plastic-weight/id1441487729
         """
-        
+        self.present(composeVC, animated: true, completion: nil)
     }
     
 }
