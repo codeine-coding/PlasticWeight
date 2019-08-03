@@ -575,6 +575,7 @@
 /* Begin XCBuildConfiguration section */
 		9FBF2BB8218E09BE009212BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -638,6 +639,7 @@
 		};
 		9FBF2BB9218E09BE009212BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -695,6 +697,7 @@
 		};
 		9FBF2BBB218E09BE009212BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -718,6 +721,7 @@
 		};
 		9FBF2BBC218E09BE009212BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -741,6 +745,7 @@
 		};
 		9FBF2BBE218E09BE009212BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -762,6 +767,7 @@
 		};
 		9FBF2BBF218E09BE009212BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -783,6 +789,7 @@
 		};
 		9FBF2BC1218E09BE009212BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -803,6 +810,7 @@
 		};
 		9FBF2BC2218E09BE009212BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
