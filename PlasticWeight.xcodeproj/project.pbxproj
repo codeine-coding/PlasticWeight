@@ -90,6 +90,7 @@
 		9F2D87A322931D9900205B6E /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		9F6ECFB222F3CF5300937050 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		9F6ECFB622F40AB800937050 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
+		9F6ECFB722F51C1F00937050 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		9FB8B1FB2287E3FD00AD393E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		9FBF2B92218E09BB009212BE /* PlasticWeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlasticWeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBF2B95218E09BB009212BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +282,7 @@
 				9FBF2B9E218E09BD009212BE /* LaunchScreen.storyboard */,
 				9FBF2BA1218E09BD009212BE /* Info.plist */,
 				9F28CFAF22EE4F680068E71A /* Localizable.strings */,
+				9F6ECFB722F51C1F00937050 /* Base.xcconfig */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -697,7 +699,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
 				INFOPLIST_FILE = PlasticWeight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -720,7 +722,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
 				INFOPLIST_FILE = PlasticWeight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
