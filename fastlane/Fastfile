@@ -41,7 +41,8 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
   	test
-    gym
+    gym(silent: true, export_method: "app_store")
+    increment_build_number(xcodeproj: "PlasticWeight.xcodeproj")
     upload_to_testflight(
       username: $username,
       app_identifier: $app_identifier,
@@ -49,7 +50,6 @@ platform :ios do
       beta_app_feedback_email: "allen@codeinecoding.com",
       reject_build_waiting_for_review: true
     )
-    increment_build_number(xcodeproj: "PlasticWeight.xcodeproj")
     commit_version_bump(
       message: "Build version bump by fastlane",
       force: true
