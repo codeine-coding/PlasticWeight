@@ -71,7 +71,7 @@ platform :ios do
       app_version: "1.0",
     )
     deliver(
-      app_version: "1.0"
+      app_version: "1.0",
       submit_for_review: true,
       automatic_release: true,
       skip_metadata: true,
