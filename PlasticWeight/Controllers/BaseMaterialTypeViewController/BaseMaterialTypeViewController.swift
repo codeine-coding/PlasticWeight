@@ -23,6 +23,10 @@ class BaseMaterialTypeViewController: UIViewController, UniversalViewDelegate, E
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        calculatorChangeNotification.removeObserver(self)
+    }
+    
     func setupView() {
         let settingsBtn = UIBarButtonItem(image: UIImage(named: "settings"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(settingsBtnPressed))
         settingsBtn.tintColor = .white
