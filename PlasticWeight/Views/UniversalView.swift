@@ -284,7 +284,9 @@ class UniversalView: UIView {
     }
     
     @objc func receiveNotification(notification: Notification) {
-        selectedMaterial  = nil
+        selectedMaterial = nil
+        materialPicker.selectRow(0, inComponent: 0, animated: false)
+        assert(materialPicker.selectedRow(inComponent: 0) == 0)
         selectedMaterialDensityMeasure = nil
         materialTextField.text = nil
         dimensionFields.clear()

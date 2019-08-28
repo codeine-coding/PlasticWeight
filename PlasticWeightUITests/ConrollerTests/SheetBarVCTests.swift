@@ -87,6 +87,23 @@ class SheetBarVCTests: XCTestCase {
         
     }
     
+    func testPickerViewResets_onNotificationChange() {
+        materialPickerField.doubleTap()
+        let pickerWheel = app.pickerWheels.element
+        pickerWheel.adjust(toPickerWheelValue: "Acrylic")
+        app.toolbars.buttons["Done"].tap()
+        XCTAssert(materialPickerField.value as! String == "Acrylic")
+        
+        app.navigationBars.buttons["Settings Button"].tap()
+        app.buttons["Metric"].tap()
+        app.buttons["Imperial"].tap()
+        app.navigationBars.buttons["Done"].tap()
+        
+        XCTAssert(materialPickerField.value as! String == "Select Material")
+        materialPickerField.doubleTap()
+        XCTAssert(pickerWheel.value as! String == "")
+    }
+    
 }
 
 

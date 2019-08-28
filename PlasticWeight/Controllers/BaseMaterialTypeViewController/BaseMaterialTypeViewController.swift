@@ -30,6 +30,7 @@ class BaseMaterialTypeViewController: UIViewController, UniversalViewDelegate, E
     func setupView() {
         let settingsBtn = UIBarButtonItem(image: UIImage(named: "settings"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(settingsBtnPressed))
         settingsBtn.tintColor = .white
+        settingsBtn.accessibilityLabel = "Settings Button"
         navigationItem.rightBarButtonItem = settingsBtn
         
         let scrrenWidth = UIScreen.main.bounds.width
