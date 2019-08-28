@@ -1,0 +1,2 @@
+
+Ahora puede elegir entre sistemas de medición imperiales y métricos.
