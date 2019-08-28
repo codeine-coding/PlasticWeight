@@ -74,7 +74,7 @@ platform :ios do
       app_version: "1.0.2",
       submit_for_review: true,
       automatic_release: true,
-      skip_metadata: true,
+      skip_metadata: false,
     )
     add_git_tag(grouping: "Production")
     push_to_git_remote
