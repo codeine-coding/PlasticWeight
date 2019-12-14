@@ -16,6 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        if #available(iOS 13, *) {
+          let appearance = UINavigationBarAppearance()
+          appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+          appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+          appearance.backgroundColor = .primary
+
+          let barButtonItemApperance = UIBarButtonItemAppearance()
+          barButtonItemApperance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+
+          appearance.backButtonAppearance = barButtonItemApperance
+          UINavigationBar.appearance().standardAppearance = appearance
+          UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
+        
         let navigationAppearance = UINavigationBar.appearance()
         navigationAppearance.barTintColor = .primary
         navigationAppearance.prefersLargeTitles = true
