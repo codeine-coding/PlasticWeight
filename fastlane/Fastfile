@@ -62,7 +62,6 @@ platform :ios do
 
 
   lane :release do
-  	test
     produce(
       username: $username,
       app_identifier: $app_identifier,
