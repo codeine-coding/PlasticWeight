@@ -40,7 +40,6 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
-  	test
     gym(silent: true, export_method: "app-store")
     upload_to_testflight(
       username: $username,
