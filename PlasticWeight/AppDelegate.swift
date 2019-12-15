@@ -77,8 +77,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                        animations: {
                         maskBGView.alpha = 0.0
         },
-                       completion: { finished in
+                       completion: { [weak self] finished in
                         maskBGView.removeFromSuperview()
+                        self?.window?.backgroundColor = .primary
         })
         
         return true
