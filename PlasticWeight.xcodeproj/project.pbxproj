@@ -700,7 +700,7 @@
 			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
@@ -726,7 +726,7 @@
 			baseConfigurationReference = 9F6ECFB722F51C1F00937050 /* Base.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = HZQ3ZGBLE6;
