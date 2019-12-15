@@ -293,6 +293,12 @@ class UniversalView: UIView {
         weightLabel.isHidden = true
         clearFieldsBtn.alpha = 0
         materialTypeImage.isHidden = false
+        
+        if let dimensionTextField = dimensionFields.controls as? [DimensionTextField] {
+            for field in dimensionTextField {
+                field.changeMeasuringIcon()
+            }
+        }
     }
     
 }

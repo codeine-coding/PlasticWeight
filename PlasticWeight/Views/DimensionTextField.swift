@@ -10,6 +10,7 @@ import UIKit
 
 class DimensionTextField: UITextField {
     var inputType: InputField?
+    let defaults = PWUserDefaults.shared
 
     init(for inputType: InputField?) {
         self.inputType = inputType
@@ -30,6 +31,8 @@ class DimensionTextField: UITextField {
         textAlignment = .center
         heightAnchor.constraint(equalToConstant: 60).isActive = true
         keyboardType = .decimalPad
+        let iconImage = UIImage(named: defaults.isImperialCalculator ? "in.png" : "mm.png")
+        setIcon(iconImage!)
         
         // text field clears on edit
         clearsOnBeginEditing = true
@@ -41,8 +44,27 @@ class DimensionTextField: UITextField {
     
 }
 
+extension UITextField {
+    func setIcon(_ image: UIImage) {
+        let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 44))
+        iconView.image = image
+        iconView.tintColor = .primary
+        let padding: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
+        let iconContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 44))
+        iconContainerView.addSubview(iconView)
+        iconContainerView.addSubview(padding)
+        rightView = iconContainerView
+        rightViewMode = .always
+    }
+}
+
 extension DimensionTextField: FormControl {
     func clear() {
         text = nil
+    }
+    
+    func changeMeasuringIcon() {
+        let iconImage = UIImage(named: defaults.isImperialCalculator ? "in.png" : "mm.png")
+        setIcon(iconImage!)
     }
 }
