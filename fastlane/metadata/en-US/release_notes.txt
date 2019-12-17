@@ -3,3 +3,4 @@ Now able to chose between Imperial and Metric measurement systems.
 *** Bug Fixes ***
 - Fixed header where in iOS 13 show as white color. Changed back to purple.
 - Fixed header light purple bleed on larger iPhones.
+- Removed iOS 13 default implementation for dark mode.
