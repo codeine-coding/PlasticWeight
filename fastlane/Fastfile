@@ -66,10 +66,10 @@ platform :ios do
       app_identifier: $app_identifier,
       app_name: "Plastic Weight",
       language: "English",
-      app_version: "1.0.4",
+      app_version: "1.0.5",
     )
     deliver(
-      app_version: "1.0.4",
+      app_version: "1.0.5",
       submit_for_review: true,
       automatic_release: true,
       skip_metadata: false,
